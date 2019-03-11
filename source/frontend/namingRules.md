@@ -1,3 +1,8 @@
+---
+title: 命名规则
+permalink: /frontend/namingRules/
+---
+
 #### 1、项目命名
 
 全部采用小写方式，以下划线分割。

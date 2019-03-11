@@ -1,0 +1,18 @@
+<%
+    var hasChild = item.children && item.children.length || item.disabled;
+
+    function navItem_url(menuItem){
+        return url_for(menuItem.path);
+    }
+
+    // 是否当前页
+    function isCurrent(menuItem){
+        return (menuItem.path + 'index.html') === path;
+    }
+%>
+
+<li class="nav-item<%- isCurrent(item) ? ' active' : '' %>" style="<%- item.hidden ? 'display: none;' : '' %>">
+    <a href="<%- hasChild ? 'javascript:void(0);'  : navItem_url(item) %>">
+        <%- __('nav.' + item.code) %>
+    </a>
+</li>

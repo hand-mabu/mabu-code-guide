@@ -1,3 +1,8 @@
+---
+title: JavaScript
+permalink: /frontend/JavaScript/
+---
+
 #### 1、缩进
 使用soft tab（4个空格）。
 ```

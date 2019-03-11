@@ -1,0 +1,30 @@
+[{
+    "code": "mabuCodeGuide",
+    "path": ""
+}, {
+    "code": "frontend",
+    "path": "namingRules/",
+    "children": [{
+        "code": "namingRules",
+        "path": "frontend/namingRules/"
+    }, {
+        "code": "HTML",
+        "path": "frontend/HTML/"
+    }, {
+        "code": "CSS_SCSS",
+        "path": "frontend/CSS_SCSS/"
+    }, {
+        "code": "JavaScript",
+        "path": "frontend/JavaScript/"
+    }]
+}, {
+    "code": "backend",
+    "path": "backend/",
+    "disabled": true,
+    "children": []
+}, {
+    "code": "git",
+    "path": "git/",
+    "disabled": true,
+    "children": []
+}]

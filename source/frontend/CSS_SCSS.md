@@ -1,3 +1,8 @@
+---
+title: CSS SCSS
+permalink: /frontend/CSS_SCSS/
+---
+
 #### 1、缩进
 使用soft table（4个空格）。
 ```

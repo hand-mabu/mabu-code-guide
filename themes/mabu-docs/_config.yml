@@ -1,0 +1,18 @@
+# Theme Config
+
+# site
+title: MabuDoc Theme # 标签栏标题
+menu: menu # 菜单配置文件名
+
+# 顶部
+header:
+  icon: assets/img/hexo-theme-suka.png # 顶部图标
+  title: MabuDoc Theme # 顶部标题
+
+# 底部
+footer:
+  home: https://hand-mabu.github.io/mabu-code-guide/ # Home 地址
+  github: https://github.com/hand-mabu/mabu-code-guide # GitHub 地址
+  author_url: https://github.com/hand-mabu # 作者地址
+  author_name: MABU # 作者名
+  license: https://github.com/hand-mabu/mabu-code-guide/blob/dev/LICENSE # License

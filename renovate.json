@@ -1,0 +1,22 @@
+{
+    "assignees": [
+        "Mabu"
+    ],
+    "extends": [
+        "config:base"
+    ],
+    "vulnerabilityAlerts": {
+        "labels": [
+            "security"
+        ],
+        "assignees": [
+            "Mabu"
+        ]
+    },
+    "reviewers": [
+        "Mabu"
+    ],
+    "commitMessageAction": "update",
+    "semanticCommits": true,
+    "semanticCommitType": "chore"
+}

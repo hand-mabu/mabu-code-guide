@@ -1,0 +1,12 @@
+github: 在 GitHub 上编辑
+toc: 目录
+top: 回到顶部
+nav:
+  mabuCodeGuide: MABU 代码规范
+  frontend: 前端
+  namingRules: 命名规则
+  HTML: HTML
+  CSS_SCSS: CSS_SCSS
+  JavaScript: JavaScript
+  backend: 后端
+  git: git

@@ -1,0 +1,34 @@
+<%
+    const en = page.path.indexOf('en') == -1 ? '' : 'en/';
+
+    function i18n_url_for(uri) {
+        return config.root + en + uri
+    }
+
+    function generateNav(menu){
+        var html = '';
+        menu.forEach((item)=>{
+            html += partial('_partial/nav-item', {item: item});
+            if(item.children && item.children.length){
+                html += generateNav(item.children);
+            }
+        });
+        return '<ul class="nav">' + html + '</ul>';
+    }
+%>
+
+<div class="docs-nav">
+    <div class="docs-search has-icon-left">
+        <i class="form-icon icon icon-search"></i>
+        <input id="search-field" class="form-input" type="text" placeholder="Search...">
+    </div>
+    <div id="search-result"></div>
+    <%- generateNav(site.data[theme.menu]) %>
+    <!-- <ul class="nav"> -->
+    <!-- 
+        <li class="nav-item">
+            <a href="<%- i18n_url_for('config/') %>"><%- __('nav.config') %></a>
+        </li>
+    -->
+    <!-- </ul> -->
+</div>
