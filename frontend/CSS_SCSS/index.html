@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <title>CSS SCSS | MabuDoc Theme</title>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <meta name="description" content="Modern, powerful and simple theme for Hexo.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@0.1.0/source/img/suka-favicon.ico">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@0.1.0/source/img/suka-favicon.ico">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.3/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.3/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.3/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="/mabu-code-guide/style.min.css">
+    <link rel="stylesheet" href="/mabu-code-guide/markdown.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@0.1.0/source/lib/prism/prism-ghcolors.min.css">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hand-mabu.github.io/hexo-mabu-doc/">
+    <meta property="og:title" content="介绍 | MabuDoc Theme">
+    <meta property="og:description" content="Modern Simlpe Powerful Theme for hexo">
+    <meta property="og:image" content>
+</head>
+
+<body>
+    
+<header class="pt-2 pb-2">
+    <div class="container grid-lg navbar pt-2 pb-2">
+        <section class="navbar-section">
+            <a class="off-canvas-toggle btn btn-link btn-action" href="#sidebar"><i class="icon icon-menu"></i></a>
+            <a class="navbar-icon" href="https://hand-mabu.github.io/hexo-mabu-doc/">
+                <img src="/mabu-code-guide/assets/img/hexo-theme-suka.png">
+            </a>
+            <a href="https://hand-mabu.github.io/hexo-mabu-doc/" class="btn btn-link">
+                MabuDoc Theme</a>
+        </section>
+        <section class="navbar-section">
+            
+            <a href="/mabu-code-guide/frontend/CSS_SCSS/" class="btn btn-link navbar-link">简体中文</a>
+            
+        </section>
+    </div>
+</header>
+
+    <div class="off-canvas off-canvas-sidebar-show">
+
+        <div id="sidebar" class="off-canvas-sidebar">
+            
+
+<div class="docs-nav">
+    <div class="docs-search has-icon-left">
+        <i class="form-icon icon icon-search"></i>
+        <input id="search-field" class="form-input" type="text" placeholder="Search...">
+    </div>
+    <div id="search-result"></div>
+    <ul class="nav">
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/">
+        MABU 代码规范
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="javascript:void(0);">
+        前端
+    </a>
+</li><ul class="nav">
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/frontend/namingRules/">
+        命名规则
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/frontend/HTML/">
+        HTML
+    </a>
+</li>
+
+<li class="nav-item active" style>
+    <a href="/mabu-code-guide/frontend/CSS_SCSS/">
+        CSS SCSS
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/frontend/JavaScript/">
+        JavaScript
+    </a>
+</li></ul>
+
+<li class="nav-item" style>
+    <a href="javascript:void(0);">
+        后端
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/gitend/git/">
+        git
+    </a>
+</li></ul>
+    <!-- <ul class="nav"> -->
+    <!-- 
+        <li class="nav-item">
+            <a href="/mabu-code-guide/en/config/">Theme Config</a>
+        </li>
+    -->
+    <!-- </ul> -->
+</div>
+        </div>
+
+        <a class="off-canvas-overlay" href="#close"></a>
+
+        <div class="off-canvas-content">
+            <div class="container px-0">
+                
+
+
+
+
+<div class="docs-header">
+    <div class="docs-header-wrapper">
+        <div class="title-wrapper">
+            <h1 class="docs-header-title mb-1">CSS SCSS</h1>
+            
+        </div>
+        <!-- <span class="label label-rounded bg-dark mt-2">
+            <a class="docs-github" href="https://github.com/theme-suka/docs/tree/master/source/frontend/CSS_SCSS.md" target="_blank">在 GitHub 上编辑</a>
+        </span> -->
+    </div>
+</div>
+
+<div class="docs-content">
+    <div class="columns">
+        <div class="column col-9 col-lg-12 docs-content-section">
+            <div class="container px-0">
+                <div id="post-content">
+                    <h4 id="1、缩进"><a href="#1、缩进" class="headerlink" title="1、缩进"></a>1、缩进</h4><p>使用soft table（4个空格）。</p>
+<pre><code>.element{
+    position: absolution;
+    top: 10px;
+    left: 10px;
+
+    border-radius: 10px;
+    width: 50px;
+    height:50px;
+}
+</code></pre><h4 id="2、分号"><a href="#2、分号" class="headerlink" title="2、分号"></a>2、分号</h4><p>每个属性声明末位都要加分号。</p>
+<pre><code>.element{
+    width: 20px;
+    height: 20px;
+
+    background-color: red;
+}
+</code></pre><h4 id="3、空格"><a href="#3、空格" class="headerlink" title="3、空格"></a>3、空格</h4><ul>
+<li><strong>以下几种情况不需要空格：</strong><ul>
+<li>属性名后；</li>
+<li>多个规则的分隔符<code>,</code>前；</li>
+<li><code>!important</code>的<code>!</code>后面；</li>
+<li>属性值中<code>(</code>后和<code>)</code>前；</li>
+<li>行末不要有多余的空格；</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>以下几种情况需要空格：</strong><ul>
+<li>属性值前；</li>
+<li>选择器<code>&gt;</code>,<code>+</code>,<code>~</code>前后；</li>
+<li><code>{</code>前后；</li>
+<li><code>!important</code>的<code>!</code>之前；</li>
+<li><code>@else</code> 前后；</li>
+<li>属性值中的<code>,</code>后；</li>
+<li>注释<code>/*</code>之后和<code>*/</code>之前；</li>
+</ul>
+</li>
+</ul>
+<pre><code>/* not good */
+.element {
+    color :red! important;
+    background-color: rgba(0,0,0,.5);
+}
+
+/* good */
+.element {
+    color: red !important;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/* not good */
+.element ,
+.dialog{
+    ...
+}
+
+/* good */
+.element,
+.dialog {
+
+}
+
+/* not good */
+.element&gt;.dialog{
+    ...
+}
+
+/* good */
+.element &gt; .dialog{
+    ...
+}
+
+/* not good */
+.element{
+    ...
+}
+
+/* good */
+.element {
+    ...
+}
+
+/* not good */
+@if{
+    ...
+}@else{
+    ...
+}
+
+/* good */
+@if {
+    ...
+} @else {
+    ...
+}
+</code></pre><h4 id="4、空行"><a href="#4、空行" class="headerlink" title="4、空行"></a>4、空行</h4><p>以下几种情况需要换行：</p>
+<ul>
+<li>文件最后保留一个空行；</li>
+<li><code>}</code>后最好跟一个空行，包括scss中嵌套的规则；</li>
+<li>属性之间需要适当的空行，具体见【<strong><em>9、属性声明顺序</em></strong>】；<br><code>`</code><br>/<em> not good </em>/<br>.element {<br> …<br>}<br>.dialog {<br> color: red;<br> &amp;:after {<pre><code> ...
+</code></pre> }<br>}</li>
+</ul>
+<p>/<em> good </em>/<br>.element {<br>    …<br>}</p>
+<p>.dialog {<br>    color: red;</p>
+<pre><code>&amp;:after {
+    ...
+}
+</code></pre><p>}</p>
+<pre><code>
+#### 5、换行
+ - 以下几种情况不需要换行：
+    - `{`前；
+ - 以下几种情况需要换行：
+    - `{`后和`}`前；
+    - 每个属性独占一行；
+    - 多个规则的分隔符`,`后；
+</code></pre><p>/<em> not good </em>/<br>.element<br>{color: red; background-color: black;}</p>
+<p>/<em> good </em>/<br>.element {<br>    color: red;<br>    background-color: black;<br>}</p>
+<p>/<em> not good </em>/<br>.element, .dialog {<br>    …<br>}</p>
+<p>/<em> good </em>/<br>.element,<br>.dialog {<br>    …<br>}</p>
+<pre><code>
+#### 6、注释
+注释统一用`/* */`（scss中也不要用`//`），具体参照下面的写法；
+
+缩进与下一行代码保持一致；
+
+可位于一个代码行的末尾，与代码间隔一个空格。 
+</code></pre><p>/<em> Modal header </em>/<br>.modal-header {<br>    …<br>}</p>
+<p>/*</p>
+<ul>
+<li>Modal header<br>*/<br>.modal-header {<br> …<br>}</li>
+</ul>
+<p>.modal-header {<br>    /<em> 50px </em>/<br>    width: 50px;</p>
+<pre><code>color: red; /* color red */
+</code></pre><p>}</p>
+<pre><code>
+#### 7、引号
+最外层统一使用双引号；
+
+url的内容要使用引号；
+
+属性选择器中的属性值需要引导；
+</code></pre><p>.element:after {<br>    content: “”;<br>    background-image: url(“logo.png”);<br>}</p>
+<p>li[data-type=”single”] {<br>    …<br>}</p>
+<pre><code>
+#### 8、命名
+ - 类名使用小写字母，以中划线分隔；
+ - id采用驼峰式命名；
+ - scss中的变量、函数、混合、placeholder采用驼峰式命名
+</code></pre><p>/<em> class </em>/<br>.element-content {<br>    …<br>}</p>
+<p>/<em> id </em>/</p>
+<p>#myDialog {<br>    …<br>}</p>
+<p>/<em> 变量 </em>/<br>$colorBlack: #000;</p>
+<p>/<em> 函数 </em>/<br>@function pxToRem($px) {<br>    …<br>}</p>
+<p>/<em> 混合 </em>/<br>@mixin centerBlock {<br>    …<br>}</p>
+<p>/<em> placeholder </em>/<br>%myDialog {<br>    …<br>}</p>
+<pre><code>
+#### 9、属性声明顺序
+相关的属性声明按下面的顺序做分组处理，组之间需要有一个空行。
+</code></pre><p>.declaration-order {<br>    display: block;<br>    float: right;</p>
+<pre><code>position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 100;
+
+border: 1px solid #e5e5e5;
+border-radius: 3px;
+width: 100px;
+height: 100px;
+
+font: normal 13px &quot;Helvetica Neue&quot;, sans-serif;
+line-height: 1.5;
+text-align: center;
+
+color: #333;
+background-color: #f5f5f5;
+
+opacity: 1;
+</code></pre><p>}</p>
+<p>// 下面是推荐的属性的顺序<br>[<br>    [<br>        “display”,<br>        “visibility”,<br>        “float”,<br>        “clear”,<br>        “overflow”,<br>        “overflow-x”,<br>        “overflow-y”,<br>        “clip”,<br>        “zoom”<br>    ],<br>    [<br>        “table-layout”,<br>        “empty-cells”,<br>        “caption-side”,<br>        “border-spacing”,<br>        “border-collapse”,<br>        “list-style”,<br>        “list-style-position”,<br>        “list-style-type”,<br>        “list-style-image”<br>    ],<br>    [<br>        “-webkit-box-orient”,<br>        “-webkit-box-direction”,<br>        “-webkit-box-decoration-break”,<br>        “-webkit-box-pack”,<br>        “-webkit-box-align”,<br>        “-webkit-box-flex”<br>    ],<br>    [<br>        “position”,<br>        “top”,<br>        “right”,<br>        “bottom”,<br>        “left”,<br>        “z-index”<br>    ],<br>    [<br>        “margin”,<br>        “margin-top”,<br>        “margin-right”,<br>        “margin-bottom”,<br>        “margin-left”,<br>        “-webkit-box-sizing”,<br>        “-moz-box-sizing”,<br>        “box-sizing”,<br>        “border”,<br>        “border-width”,<br>        “border-style”,<br>        “border-color”,<br>        “border-top”,<br>        “border-top-width”,<br>        “border-top-style”,<br>        “border-top-color”,<br>        “border-right”,<br>        “border-right-width”,<br>        “border-right-style”,<br>        “border-right-color”,<br>        “border-bottom”,<br>        “border-bottom-width”,<br>        “border-bottom-style”,<br>        “border-bottom-color”,<br>        “border-left”,<br>        “border-left-width”,<br>        “border-left-style”,<br>        “border-left-color”,<br>        “-webkit-border-radius”,<br>        “-moz-border-radius”,<br>        “border-radius”,<br>        “-webkit-border-top-left-radius”,<br>        “-moz-border-radius-topleft”,<br>        “border-top-left-radius”,<br>        “-webkit-border-top-right-radius”,<br>        “-moz-border-radius-topright”,<br>        “border-top-right-radius”,<br>        “-webkit-border-bottom-right-radius”,<br>        “-moz-border-radius-bottomright”,<br>        “border-bottom-right-radius”,<br>        “-webkit-border-bottom-left-radius”,<br>        “-moz-border-radius-bottomleft”,<br>        “border-bottom-left-radius”,<br>        “-webkit-border-image”,<br>        “-moz-border-image”,<br>        “-o-border-image”,<br>        “border-image”,<br>        “-webkit-border-image-source”,<br>        “-moz-border-image-source”,<br>        “-o-border-image-source”,<br>        “border-image-source”,<br>        “-webkit-border-image-slice”,<br>        “-moz-border-image-slice”,<br>        “-o-border-image-slice”,<br>        “border-image-slice”,<br>        “-webkit-border-image-width”,<br>        “-moz-border-image-width”,<br>        “-o-border-image-width”,<br>        “border-image-width”,<br>        “-webkit-border-image-outset”,<br>        “-moz-border-image-outset”,<br>        “-o-border-image-outset”,<br>        “border-image-outset”,<br>        “-webkit-border-image-repeat”,<br>        “-moz-border-image-repeat”,<br>        “-o-border-image-repeat”,<br>        “border-image-repeat”,<br>        “padding”,<br>        “padding-top”,<br>        “padding-right”,<br>        “padding-bottom”,<br>        “padding-left”,<br>        “width”,<br>        “min-width”,<br>        “max-width”,<br>        “height”,<br>        “min-height”,<br>        “max-height”<br>    ],<br>    [<br>        “font”,<br>        “font-family”,<br>        “font-size”,<br>        “font-weight”,<br>        “font-style”,<br>        “font-variant”,<br>        “font-size-adjust”,<br>        “font-stretch”,<br>        “font-effect”,<br>        “font-emphasize”,<br>        “font-emphasize-position”,<br>        “font-emphasize-style”,<br>        “font-smooth”,<br>        “line-height”,<br>        “text-align”,<br>        “-webkit-text-align-last”,<br>        “-moz-text-align-last”,<br>        “-ms-text-align-last”,<br>        “text-align-last”,<br>        “vertical-align”,<br>        “white-space”,<br>        “text-decoration”,<br>        “text-emphasis”,<br>        “text-emphasis-color”,<br>        “text-emphasis-style”,<br>        “text-emphasis-position”,<br>        “text-indent”,<br>        “-ms-text-justify”,<br>        “text-justify”,<br>        “letter-spacing”,<br>        “word-spacing”,<br>        “-ms-writing-mode”,<br>        “text-outline”,<br>        “text-transform”,<br>        “text-wrap”,<br>        “-ms-text-overflow”,<br>        “text-overflow”,<br>        “text-overflow-ellipsis”,<br>        “text-overflow-mode”,<br>        “-ms-word-wrap”,<br>        “word-wrap”,<br>        “-ms-word-break”,<br>        “word-break”<br>    ],<br>    [<br>        “color”,<br>        “background”,<br>        “filter:progid:DXImageTransform.Microsoft.AlphaImageLoader”,<br>        “background-color”,<br>        “background-image”,<br>        “background-repeat”,<br>        “background-attachment”,<br>        “background-position”,<br>        “-ms-background-position-x”,<br>        “background-position-x”,<br>        “-ms-background-position-y”,<br>        “background-position-y”,<br>        “-webkit-background-clip”,<br>        “-moz-background-clip”,<br>        “background-clip”,<br>        “background-origin”,<br>        “-webkit-background-size”,<br>        “-moz-background-size”,<br>        “-o-background-size”,<br>        “background-size”<br>    ],<br>    [<br>        “outline”,<br>        “outline-width”,<br>        “outline-style”,<br>        “outline-color”,<br>        “outline-offset”,<br>        “opacity”,<br>        “filter:progid:DXImageTransform.Microsoft.Alpha(Opacity”,<br>        “-ms-filter:\‘progid:DXImageTransform.Microsoft.Alpha”,<br>        “-ms-interpolation-mode”,<br>        “-webkit-box-shadow”,<br>        “-moz-box-shadow”,<br>        “box-shadow”,<br>        “filter:progid:DXImageTransform.Microsoft.gradient”,<br>        “-ms-filter:\‘progid:DXImageTransform.Microsoft.gradient”,<br>        “text-shadow”<br>    ],<br>    [<br>        “-webkit-transition”,<br>        “-moz-transition”,<br>        “-ms-transition”,<br>        “-o-transition”,<br>        “transition”,<br>        “-webkit-transition-delay”,<br>        “-moz-transition-delay”,<br>        “-ms-transition-delay”,<br>        “-o-transition-delay”,<br>        “transition-delay”,<br>        “-webkit-transition-timing-function”,<br>        “-moz-transition-timing-function”,<br>        “-ms-transition-timing-function”,<br>        “-o-transition-timing-function”,<br>        “transition-timing-function”,<br>        “-webkit-transition-duration”,<br>        “-moz-transition-duration”,<br>        “-ms-transition-duration”,<br>        “-o-transition-duration”,<br>        “transition-duration”,<br>        “-webkit-transition-property”,<br>        “-moz-transition-property”,<br>        “-ms-transition-property”,<br>        “-o-transition-property”,<br>        “transition-property”,<br>        “-webkit-transform”,<br>        “-moz-transform”,<br>        “-ms-transform”,<br>        “-o-transform”,<br>        “transform”,<br>        “-webkit-transform-origin”,<br>        “-moz-transform-origin”,<br>        “-ms-transform-origin”,<br>        “-o-transform-origin”,<br>        “transform-origin”,<br>        “-webkit-animation”,<br>        “-moz-animation”,<br>        “-ms-animation”,<br>        “-o-animation”,<br>        “animation”,<br>        “-webkit-animation-name”,<br>        “-moz-animation-name”,<br>        “-ms-animation-name”,<br>        “-o-animation-name”,<br>        “animation-name”,<br>        “-webkit-animation-duration”,<br>        “-moz-animation-duration”,<br>        “-ms-animation-duration”,<br>        “-o-animation-duration”,<br>        “animation-duration”,<br>        “-webkit-animation-play-state”,<br>        “-moz-animation-play-state”,<br>        “-ms-animation-play-state”,<br>        “-o-animation-play-state”,<br>        “animation-play-state”,<br>        “-webkit-animation-timing-function”,<br>        “-moz-animation-timing-function”,<br>        “-ms-animation-timing-function”,<br>        “-o-animation-timing-function”,<br>        “animation-timing-function”,<br>        “-webkit-animation-delay”,<br>        “-moz-animation-delay”,<br>        “-ms-animation-delay”,<br>        “-o-animation-delay”,<br>        “animation-delay”,<br>        “-webkit-animation-iteration-count”,<br>        “-moz-animation-iteration-count”,<br>        “-ms-animation-iteration-count”,<br>        “-o-animation-iteration-count”,<br>        “animation-iteration-count”,<br>        “-webkit-animation-direction”,<br>        “-moz-animation-direction”,<br>        “-ms-animation-direction”,<br>        “-o-animation-direction”,<br>        “animation-direction”<br>    ],<br>    [<br>        “content”,<br>        “quotes”,<br>        “counter-reset”,<br>        “counter-increment”,<br>        “resize”,<br>        “cursor”,<br>        “-webkit-user-select”,<br>        “-moz-user-select”,<br>        “-ms-user-select”,<br>        “user-select”,<br>        “nav-index”,<br>        “nav-up”,<br>        “nav-right”,<br>        “nav-down”,<br>        “nav-left”,<br>        “-moz-tab-size”,<br>        “-o-tab-size”,<br>        “tab-size”,<br>        “-webkit-hyphens”,<br>        “-moz-hyphens”,<br>        “hyphens”,<br>        “pointer-events”<br>    ]<br>]</p>
+<pre><code>
+#### 10、颜色
+颜色16进制用小写字母；
+
+颜色16进制尽量用简写。
+</code></pre><p>/<em> not good </em>/<br>.element {<br>    color: #ABCDEF;<br>    background-color: #001122;<br>}</p>
+<p>/<em> good </em>/<br>.element {<br>    color: #abcdef;<br>    background-color: #012;<br>}</p>
+<pre><code>
+#### 11、属性简写
+属性简写需要你非常清楚属性值的正确顺序，而且在大多数情况下并不需要设置属性简写中包含的所有值，所以建议尽量分开声明会更加清晰；
+
+`margin` 和 `padding` 相反，需要使用简写；
+
+常见的属性简写包括：
+ - `font`
+ - `background`
+ - `transition`
+ - `animation`
+</code></pre><p>/<em> not good </em>/<br>.element {<br>    transition: opacity 1s linear 2s;<br>}</p>
+<p>/<em> good </em>/<br>.element {<br>    transition-delay: 2s;<br>    transition-timing-function: linear;<br>    transition-duration: 1s;<br>    transition-property: opacity;<br>}</p>
+<pre><code>
+#### 12、媒体查询
+尽量将媒体查询的规则靠近与他们相关的规则，不要将他们一起放到一个独立的样式文件中，或者丢在文档的最底部，这样做只会让大家以后更容易忘记他们。
+</code></pre><p>.element {<br>    …<br>}</p>
+<p>.element-avatar{<br>    …<br>}</p>
+<p>@media (min-width: 480px) {<br>    .element {<br>        …<br>    }</p>
+<pre><code>.element-avatar {
+    ...
+}
+</code></pre><p>}</p>
+<pre><code>#### 13、SCSS相关
+提交的代码中不要有 `@debug`；
+
+声明顺序：
+ - `@extend`
+ - 不包含 `@content` 的 `@include`
+ - 包含 `@content` 的 `@include`
+ - 自身属性
+ - 嵌套规则
+
+`@import` 引入的文件不需要开头的`_`和结尾的`.scss`；
+
+嵌套最多不能超过5层；
+
+`@extend` 中使用placeholder选择器；
+
+去掉不必要的父级引用符号`&amp;`。
+</code></pre><p>/<em> not good </em>/<br>@import “_dialog.scss”;</p>
+<p>/<em> good </em>/<br>@import “dialog”;</p>
+<p>/<em> not good </em>/<br>.fatal {<br>    @extend .error;<br>}</p>
+<p>/<em> good </em>/<br>.fatal {<br>    @extend %error;<br>}</p>
+<p>/<em> not good </em>/<br>.element {<br>    &amp; &gt; .dialog {<br>        …<br>    }<br>}</p>
+<p>/<em> good </em>/<br>.element {<br>    &gt; .dialog {<br>        …<br>    }<br>}</p>
+<pre><code>
+#### 14、杂项
+ - 不允许有空的规则；
+ - 元素选择器用小写字母；
+ - 去掉小数点前面的0；
+ - 去掉数字中不必要的小数点和末尾的0；
+ - 属性值&#39;0&#39;后面不要加单位；
+ - 同个属性不同前缀的写法需要在垂直方向保持对齐，具体参照右边的写法；
+ - 无前缀的标准属性应该写在有前缀的属性后面；
+ - 不要在同个规则里出现重复的属性，如果重复的属性是连续的则没关系；
+ - 不要在一个文件里出现两个相同的规则；
+ - 用 `border: 0;` 代替 `border: none;`；
+ - 选择器不要超过4层（在scss中如果超过4层应该考虑用嵌套的方式来写）；
+ - 发布的代码中不要有 `@import`；
+ - 尽量少用&#39;*&#39;选择器。
+</code></pre><p>/<em> not good </em>/<br>.element {<br>}</p>
+<p>/<em> not good </em>/<br>LI {<br>    …<br>}</p>
+<p>/<em> good </em>/<br>li {<br>    …<br>}</p>
+<p>/<em> not good </em>/<br>.element {<br>    color: rgba(0, 0, 0, 0.5);<br>}</p>
+<p>/<em> good </em>/<br>.element {<br>    color: rgba(0, 0, 0, .5);<br>}</p>
+<p>/<em> not good </em>/<br>.element {<br>    width: 50.0px;<br>}</p>
+<p>/<em> good </em>/<br>.element {<br>    width: 50px;<br>}</p>
+<p>/<em> not good </em>/<br>.element {<br>    width: 0px;<br>}</p>
+<p>/<em> good </em>/<br>.element {<br>    width: 0;<br>}</p>
+<p>/<em> not good </em>/<br>.element {<br>    border-radius: 3px;<br>    -webkit-border-radius: 3px;<br>    -moz-border-radius: 3px;</p>
+<pre><code>background: linear-gradient(to bottom, #fff 0, #eee 100%);
+background: -webkit-linear-gradient(top, #fff 0, #eee 100%);
+background: -moz-linear-gradient(top, #fff 0, #eee 100%);
+</code></pre><p>}</p>
+<p>/<em> good </em>/<br>.element {<br>    -webkit-border-radius: 3px;<br>       -moz-border-radius: 3px;<br>            border-radius: 3px;</p>
+<pre><code>background: -webkit-linear-gradient(top, #fff 0, #eee 100%);
+background:    -moz-linear-gradient(top, #fff 0, #eee 100%);
+background:         linear-gradient(to bottom, #fff 0, #eee 100%);
+</code></pre><p>}</p>
+<p>/<em> not good </em>/<br>.element {<br>    color: rgb(0, 0, 0);<br>    width: 50px;<br>    color: rgba(0, 0, 0, .5);<br>}</p>
+<p>/<em> good </em>/<br>.element {<br>    color: rgb(0, 0, 0);<br>    color: rgba(0, 0, 0, .5);<br>}<br><code>`</code></p>
+<hr>
+<p><strong>相关资料：</strong></p>
+<ul>
+<li><a href="http://alloyteam.github.io/CodeGuide/" target="_blank" rel="noopener">Code Guide by @AlloyTeam</a></li>
+</ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="column col-3 hide-lg docs-toc-section">
+            <div class="container px-0">
+                <div id="post-toc">
+                    
+                        <p class="h4 text-bold">目录</p>
+                        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1、缩进"><span class="post-toc-text">1、缩进</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2、分号"><span class="post-toc-text">2、分号</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3、空格"><span class="post-toc-text">3、空格</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4、空行"><span class="post-toc-text">4、空行</span></a></li></ol>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <p class="mb-2"><a href="https://hand-mabu.github.io/mabu-code-guide/" target="_blank">Home</a> · <a href="https://github.com/hand-mabu/mabu-code-guide" target="_blank">GitHub</a>
+    </p><p>Designed and built with by <a href="https://github.com/hand-mabu" target="_blank">MABU</a>. Licensed under the <a href="https://github.com/hand-mabu/mabu-code-guide/blob/dev/LICENSE" target="_blank">GPL V3 License</a>.</p>
+</footer>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <script src="/mabu-code-guide/jquery.min.js"></script>
+    <script src="/mabu-code-guide/index.js"></script>
+    <script src="/mabu-code-guide/local-search.min.js"></script>
+    <script>
+        searchFunc('/mabu-code-guide/search.json')
+    </script>
+</body>
+
+</html>

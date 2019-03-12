@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <title>git规范 | MabuDoc Theme</title>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <meta name="description" content="Modern, powerful and simple theme for Hexo.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@0.1.0/source/img/suka-favicon.ico">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@0.1.0/source/img/suka-favicon.ico">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.3/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.3/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.3/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="/mabu-code-guide/style.min.css">
+    <link rel="stylesheet" href="/mabu-code-guide/markdown.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@0.1.0/source/lib/prism/prism-ghcolors.min.css">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hand-mabu.github.io/hexo-mabu-doc/">
+    <meta property="og:title" content="介绍 | MabuDoc Theme">
+    <meta property="og:description" content="Modern Simlpe Powerful Theme for hexo">
+    <meta property="og:image" content>
+</head>
+
+<body>
+    
+<header class="pt-2 pb-2">
+    <div class="container grid-lg navbar pt-2 pb-2">
+        <section class="navbar-section">
+            <a class="off-canvas-toggle btn btn-link btn-action" href="#sidebar"><i class="icon icon-menu"></i></a>
+            <a class="navbar-icon" href="https://hand-mabu.github.io/hexo-mabu-doc/">
+                <img src="/mabu-code-guide/assets/img/hexo-theme-suka.png">
+            </a>
+            <a href="https://hand-mabu.github.io/hexo-mabu-doc/" class="btn btn-link">
+                MabuDoc Theme</a>
+        </section>
+        <section class="navbar-section">
+            
+            <a href="/mabu-code-guide/gitend/git.html" class="btn btn-link navbar-link">简体中文</a>
+            
+        </section>
+    </div>
+</header>
+
+    <div class="off-canvas off-canvas-sidebar-show">
+
+        <div id="sidebar" class="off-canvas-sidebar">
+            
+
+<div class="docs-nav">
+    <div class="docs-search has-icon-left">
+        <i class="form-icon icon icon-search"></i>
+        <input id="search-field" class="form-input" type="text" placeholder="Search...">
+    </div>
+    <div id="search-result"></div>
+    <ul class="nav">
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/">
+        MABU 代码规范
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="javascript:void(0);">
+        前端
+    </a>
+</li><ul class="nav">
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/frontend/namingRules/">
+        命名规则
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/frontend/HTML/">
+        HTML
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/frontend/CSS_SCSS/">
+        CSS SCSS
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/frontend/JavaScript/">
+        JavaScript
+    </a>
+</li></ul>
+
+<li class="nav-item" style>
+    <a href="javascript:void(0);">
+        后端
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/gitend/git/">
+        git
+    </a>
+</li></ul>
+    <!-- <ul class="nav"> -->
+    <!-- 
+        <li class="nav-item">
+            <a href="/mabu-code-guide/en/config/">Theme Config</a>
+        </li>
+    -->
+    <!-- </ul> -->
+</div>
+        </div>
+
+        <a class="off-canvas-overlay" href="#close"></a>
+
+        <div class="off-canvas-content">
+            <div class="container px-0">
+                
+
+
+
+
+<div class="docs-header">
+    <div class="docs-header-wrapper">
+        <div class="title-wrapper">
+            <h1 class="docs-header-title mb-1">git规范</h1>
+            
+                <p class="h4 mb-2">git提交相关规范明细</p>
+            
+        </div>
+        <!-- <span class="label label-rounded bg-dark mt-2">
+            <a class="docs-github" href="https://github.com/theme-suka/docs/tree/master/source/gitend/git.md" target="_blank">在 GitHub 上编辑</a>
+        </span> -->
+    </div>
+</div>
+
+<div class="docs-content">
+    <div class="columns">
+        <div class="column col-9 col-lg-12 docs-content-section">
+            <div class="container px-0">
+                <div id="post-content">
+                    <h2 id="分支命名"><a href="#分支命名" class="headerlink" title="分支命名"></a>分支命名</h2><p>分支对于一个团队或者用户来说起到标识和<strong>版本控制</strong>的作用。</p>
+<h3 id="BRANCH"><a href="#BRANCH" class="headerlink" title="BRANCH"></a>BRANCH</h3><h4 id="自己的分支"><a href="#自己的分支" class="headerlink" title="自己的分支"></a>自己的分支</h4><p>使用 项目名称 + 下划线 + 名字缩写 或者 名字缩写 命名</p>
+<blockquote>
+<p>举例： <code>hdm_xg</code> / <code>xg</code><br>注意： 均使用小写 </p>
+</blockquote>
+<h4 id="特殊分支"><a href="#特殊分支" class="headerlink" title="特殊分支"></a>特殊分支</h4><p>特殊分支的命名需要根据项目来定。</p>
+<h3 id="TAG"><a href="#TAG" class="headerlink" title="TAG"></a>TAG</h3><p>使用 <code>tag</code> 完成版本控制。</p>
+<p>大家可以注意到，一般的项目版本格式是 <code>1.0.0-release</code> 这样，简要说明一下版本的格式</p>
+<p>以 <code>1.0.0</code> 举例:<br>第一位数表示项目大版本，只有出现大的功能型变更才会变更第一位数<br>第二位数表示小功能的变更，增加或修订了重大bug可以变更第二位数<br>第三位数表示功能的修复，一般一段时间修复了若干bug才会变更第三位数</p>
+<p>我们一般提供 <code>release</code> 和 <code>snapshot</code> 两个大版本</p>
+<ul>
+<li><code>release</code> 用于发布正式版，一般用于没有明显bug的版本</li>
+<li><code>snapshot</code> 用于发布快速测试版，一般用于新功能发布测试</li>
+</ul>
+<blockquote>
+<p>我们尽量参考 <code>Linux</code> 的发布模式，正式版用偶数的形式发出</p>
+</blockquote>
+<h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p>使用 <code>git</code> 进行提交时，要遵循如下规范:</p>
+<p><code>git</code> 完成一个正常的提交应该有如下操作</p>
+<h3 id="应用端"><a href="#应用端" class="headerlink" title="应用端"></a>应用端</h3><ul>
+<li>简要查看此次修改的内容</li>
+<li>一键拉取最新代码</li>
+<li>编写 <code>commit</code></li>
+<li>请求 <code>merge</code> 到 <code>主分支</code></li>
+</ul>
+<h3 id="使用命令端提交-建议配合-github-desktop-使用"><a href="#使用命令端提交-建议配合-github-desktop-使用" class="headerlink" title="使用命令端提交(建议配合 github desktop 使用)"></a>使用命令端提交(建议配合 <code>github desktop</code> 使用)</h3><ul>
+<li><code>git status</code> (简要查看此次修改的内容)</li>
+<li><code>git add .</code> (增加此次提交的全部内容，也可以分批次 <code>add</code>)</li>
+<li><code>git commit -m &quot;commit描述&quot;</code> (增加此次提交的描述)</li>
+<li><code>git pull origin master</code> (拉取最新代码，此操作根据具体项目操作)</li>
+<li><code>git push origin xxx</code> (提交到自己的分支上去)</li>
+<li>请求 <code>merge</code> 到 <code>主分支</code></li>
+</ul>
+<h3 id="Commit-规范"><a href="#Commit-规范" class="headerlink" title="Commit 规范"></a>Commit 规范</h3><p>在 <code>git commit</code> 时，需要添加针对本次提交的描述，描述应该包括此次提交的动作 + 空格 + 一小段描述，详细提交动作如下:</p>
+<h4 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h4><h5 id="ADD"><a href="#ADD" class="headerlink" title="[ADD]"></a>[ADD]</h5><p>新增某个功能时使用</p>
+<blockquote>
+<p>举例： <code>git commit -m &quot;[ADD] 新增消息推送功能&quot;</code> </p>
+</blockquote>
+<h5 id="IMP"><a href="#IMP" class="headerlink" title="[IMP]"></a>[IMP]</h5><p>基于现有的功能完成优化、修改时使用。</p>
+<blockquote>
+<p>举例： <code>git commit -m &quot;[IMP] 优化消息同步功能&quot;</code> </p>
+</blockquote>
+<h5 id="FIX"><a href="#FIX" class="headerlink" title="[FIX]"></a>[FIX]</h5><p>修复某块 <code>BUG</code> 时使用。</p>
+<blockquote>
+<p>举例： <code>git commit -m &quot;[FIX] 修复消息无法持久的bug&quot;</code> </p>
+</blockquote>
+<h4 id="不常用"><a href="#不常用" class="headerlink" title="不常用"></a>不常用</h4><h5 id="INIT"><a href="#INIT" class="headerlink" title="[INIT]"></a>[INIT]</h5><p>初始化某个项目、模块时使用。</p>
+<blockquote>
+<p>举例： <code>git commit -m &quot;[INIT] 初始化kafka模块&quot;</code> </p>
+</blockquote>
+<h5 id="REM"><a href="#REM" class="headerlink" title="[REM]"></a>[REM]</h5><p>删除项目不再需要的文件或模块时使用。</p>
+<blockquote>
+<p>举例： <code>git commit -m &quot;[REM] 移除消息推送中不再使用的方法&quot;</code> </p>
+</blockquote>
+<h5 id="REF"><a href="#REF" class="headerlink" title="[REF]"></a>[REF]</h5><p>重构项目中某块功能或模块时使用。</p>
+<blockquote>
+<p>举例： <code>git commit -m &quot;[REF] 重构消息消费模块&quot;</code> </p>
+</blockquote>
+<h2 id="合并主分支"><a href="#合并主分支" class="headerlink" title="合并主分支"></a>合并主分支</h2><p>依据不同项目，前面的步骤过后，需要将代码合并至<strong>主分支</strong>(此时代码还在自己的分支)，发起合并请求后，在描述区域写清楚此次提交全部变动，不管是给代码合并者，或是所有人一个预览的作用。</p>
+<p>举例：</p>
+<pre><code>    1. 新增消息推送功能(StartMQ)
+    2. 修复用户管理刷新的bug
+    3. 优化部分代码(用户模块、消息模块)
+    4. 修改数据库初始化文件
+</code></pre><blockquote>
+<p>请注意在 <code>1.</code> 后面增加空格 <code></code>， 这样 <code>git</code> 会自动识别格式。<br>我们一般将数据库相关的变动放在结尾，书写顺序按照 初始化 -&gt; 重构 -&gt; 代码(新增、修改、删除) -&gt; 代码优化 -&gt; 代码移除 -&gt; 数据库信息 的顺序书写。</p>
+</blockquote>
+
+                </div>
+            </div>
+        </div>
+        <div class="column col-3 hide-lg docs-toc-section">
+            <div class="container px-0">
+                <div id="post-toc">
+                    
+                        <p class="h4 text-bold">目录</p>
+                        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分支命名"><span class="post-toc-text">分支命名</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#BRANCH"><span class="post-toc-text">BRANCH</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#自己的分支"><span class="post-toc-text">自己的分支</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#特殊分支"><span class="post-toc-text">特殊分支</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TAG"><span class="post-toc-text">TAG</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#提交"><span class="post-toc-text">提交</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#应用端"><span class="post-toc-text">应用端</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用命令端提交-建议配合-github-desktop-使用"><span class="post-toc-text">使用命令端提交(建议配合 github desktop 使用)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Commit-规范"><span class="post-toc-text">Commit 规范</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#常用"><span class="post-toc-text">常用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#ADD"><span class="post-toc-text">[ADD]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#IMP"><span class="post-toc-text">[IMP]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#FIX"><span class="post-toc-text">[FIX]</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#不常用"><span class="post-toc-text">不常用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#INIT"><span class="post-toc-text">[INIT]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#REM"><span class="post-toc-text">[REM]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#REF"><span class="post-toc-text">[REF]</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#合并主分支"><span class="post-toc-text">合并主分支</span></a></li></ol>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <p class="mb-2"><a href="https://hand-mabu.github.io/mabu-code-guide/" target="_blank">Home</a> · <a href="https://github.com/hand-mabu/mabu-code-guide" target="_blank">GitHub</a>
+    </p><p>Designed and built with by <a href="https://github.com/hand-mabu" target="_blank">MABU</a>. Licensed under the <a href="https://github.com/hand-mabu/mabu-code-guide/blob/dev/LICENSE" target="_blank">GPL V3 License</a>.</p>
+</footer>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <script src="/mabu-code-guide/jquery.min.js"></script>
+    <script src="/mabu-code-guide/index.js"></script>
+    <script src="/mabu-code-guide/local-search.min.js"></script>
+    <script>
+        searchFunc('/mabu-code-guide/search.json')
+    </script>
+</body>
+
+</html>
