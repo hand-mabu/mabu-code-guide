@@ -24,7 +24,7 @@
     "children": []
 }, {
     "code": "git",
-    "path": "git/",
-    "disabled": true,
+    "path": "gitend/git/",
+    "disabled": false,
     "children": []
 }]
