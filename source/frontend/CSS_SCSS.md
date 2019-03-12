@@ -3,9 +3,11 @@ title: CSS SCSS
 permalink: /frontend/CSS_SCSS/
 ---
 
-#### 1、缩进
+# 1、缩进
+
 使用soft table（4个空格）。
-```
+
+```css
 .element{
     position: absolution;
     top: 10px;
@@ -17,9 +19,11 @@ permalink: /frontend/CSS_SCSS/
 }
 ```
 
-#### 2、分号
+# 2、分号
+
 每个属性声明末位都要加分号。
-```
+
+```css
 .element{
     width: 20px;
     height: 20px;
@@ -28,7 +32,8 @@ permalink: /frontend/CSS_SCSS/
 }
 ```
 
-#### 3、空格
+# 3、空格
+
  - **以下几种情况不需要空格：**
     - 属性名后；
     - 多个规则的分隔符`,`前；
@@ -46,7 +51,7 @@ permalink: /frontend/CSS_SCSS/
      - 属性值中的`,`后；
      - 注释`/*`之后和`*/`之前；
 
-```
+```css
 /* not good */
 .element {
     color :red! important;
@@ -106,12 +111,14 @@ permalink: /frontend/CSS_SCSS/
 }
 ```
 
-#### 4、空行
-以下几种情况需要换行：
- - 文件最后保留一个空行；
- - `}`后最好跟一个空行，包括scss中嵌套的规则；
- - 属性之间需要适当的空行，具体见【***9、属性声明顺序***】；
-```
+# 4、空行
+
+- **以下几种情况需要换行：**
+    - 文件最后保留一个空行；
+    - `}`后最好跟一个空行，包括scss中嵌套的规则；
+    - 属性之间需要适当的空行，具体见 **[属性声明顺序](#9、属性声明顺序)** ；
+
+```css
 /* not good */
 .element {
     ...
@@ -137,14 +144,16 @@ permalink: /frontend/CSS_SCSS/
 }
 ```
 
-#### 5、换行
- - 以下几种情况不需要换行：
+# 5、换行
+
+ - **以下几种情况不需要换行：**
     - `{`前；
- - 以下几种情况需要换行：
+ - **以下几种情况需要换行：**
     - `{`后和`}`前；
     - 每个属性独占一行；
     - 多个规则的分隔符`,`后；
-```
+
+```css
 /* not good */
 .element
 {color: red; background-color: black;}
@@ -167,13 +176,14 @@ permalink: /frontend/CSS_SCSS/
 }
 ```
 
-#### 6、注释
+# 6、注释
 注释统一用`/* */`（scss中也不要用`//`），具体参照下面的写法；
 
 缩进与下一行代码保持一致；
 
 可位于一个代码行的末尾，与代码间隔一个空格。 
-```
+
+```css
 /* Modal header */
 .modal-header {
     ...
@@ -194,13 +204,14 @@ permalink: /frontend/CSS_SCSS/
 }
 ```
 
-#### 7、引号
+# 7、引号
 最外层统一使用双引号；
 
 url的内容要使用引号；
 
 属性选择器中的属性值需要引导；
-```
+
+```css
 .element:after {
     content: "";
     background-image: url("logo.png");
@@ -211,11 +222,12 @@ li[data-type="single"] {
 }
 ```
 
-#### 8、命名
+# 8、命名
  - 类名使用小写字母，以中划线分隔；
  - id采用驼峰式命名；
  - scss中的变量、函数、混合、placeholder采用驼峰式命名
-```
+
+```css
 /* class */
 .element-content {
     ...
@@ -245,9 +257,10 @@ $colorBlack: #000;
 }
 ```
 
-#### 9、属性声明顺序
+# 9、属性声明顺序
 相关的属性声明按下面的顺序做分组处理，组之间需要有一个空行。
-```
+
+```css
 .declaration-order {
     display: block;
     float: right;
@@ -274,7 +287,7 @@ $colorBlack: #000;
     opacity: 1;
 }
 
-// 下面是推荐的属性的顺序
+/* 下面是推荐的属性的顺序 */
 [
     [
         "display",
@@ -582,11 +595,13 @@ $colorBlack: #000;
 ]
 ```
 
-#### 10、颜色
+# 10、颜色
+
 颜色16进制用小写字母；
 
 颜色16进制尽量用简写。
-```
+
+```css
 /* not good */
 .element {
     color: #ABCDEF;
@@ -600,7 +615,8 @@ $colorBlack: #000;
 }
 ```
 
-#### 11、属性简写
+# 11、属性不建议简写
+
 属性简写需要你非常清楚属性值的正确顺序，而且在大多数情况下并不需要设置属性简写中包含的所有值，所以建议尽量分开声明会更加清晰；
 
 `margin` 和 `padding` 相反，需要使用简写；
@@ -610,7 +626,8 @@ $colorBlack: #000;
  - `background`
  - `transition`
  - `animation`
-```
+
+```css
 /* not good */
 .element {
     transition: opacity 1s linear 2s;
@@ -625,9 +642,11 @@ $colorBlack: #000;
 }
 ```
 
-#### 12、媒体查询
+# 12、媒体查询
+
 尽量将媒体查询的规则靠近与他们相关的规则，不要将他们一起放到一个独立的样式文件中，或者丢在文档的最底部，这样做只会让大家以后更容易忘记他们。
-```
+
+```css
 .element {
     ...
 }
@@ -646,7 +665,8 @@ $colorBlack: #000;
     }
 }
 ```
-#### 13、SCSS相关
+
+# 13、SCSS相关
 提交的代码中不要有 `@debug`；
 
 声明顺序：
@@ -663,7 +683,8 @@ $colorBlack: #000;
 `@extend` 中使用placeholder选择器；
 
 去掉不必要的父级引用符号`&`。
-```
+
+```scss
 /* not good */
 @import "_dialog.scss";
 
@@ -695,7 +716,8 @@ $colorBlack: #000;
 }
 ```
 
-#### 14、杂项
+# 14、杂项
+
  - 不允许有空的规则；
  - 元素选择器用小写字母；
  - 去掉小数点前面的0；
@@ -709,7 +731,8 @@ $colorBlack: #000;
  - 选择器不要超过4层（在scss中如果超过4层应该考虑用嵌套的方式来写）；
  - 发布的代码中不要有 `@import`；
  - 尽量少用'*'选择器。
-```
+
+```css
 /* not good */
 .element {
 }
