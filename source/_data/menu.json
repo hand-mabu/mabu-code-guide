@@ -18,10 +18,39 @@
         "path": "frontend/JavaScript/"
     }]
 }, {
-    "code": "backend",
-    "path": "backend/",
-    "disabled": true,
-    "children": []
+  "code": "backend",
+  "path": "ProgramRules/",
+  "disabled": true,
+  "children": [
+    {
+      "code": "ProgramRules",
+      "path": "backend/ProgramRules/"
+    },
+    {
+      "code": "ExceptionLog",
+      "path": "backend/ExceptionLog/"
+    },
+    {
+      "code": "UnitTest",
+      "path": "backend/UnitTest/"
+    },
+    {
+      "code": "SafetyRules",
+      "path": "backend/SafetyRules/"
+    },
+    {
+      "code": "MysqlDatabase",
+      "path": "backend/MysqlDatabase/"
+    },
+    {
+      "code": "EngineeringStructure",
+      "path": "backend/EngineeringStructure/"
+    },
+    {
+      "code": "ProperNoun",
+      "path": "backend/ProperNoun/"
+    }
+  ]
 }, {
     "code": "git",
     "path": "gitend/git/",

@@ -9,4 +9,11 @@ nav:
   CSS_SCSS: CSS SCSS
   JavaScript: JavaScript
   backend: 后端
+  ProgramRules: 编程规约
+  ExceptionLog: 异常日志
+  UnitTest: 单元测试
+  SafetyRules: 安全规约
+  MysqlDatabase: MYSQL数据库
+  EngineeringStructure: 工程结构
+  ProperNoun: 专有名词
   git: git

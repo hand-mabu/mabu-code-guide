@@ -7,3 +7,11 @@ public/
 .deploy*/
 package-lock.json
 !public/README.md
+
+# Intellij
+.idea/
+*.iml
+*.iws
+**/out
+overlays/
+.gitignore
