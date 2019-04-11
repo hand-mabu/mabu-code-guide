@@ -6,8 +6,28 @@ permalink: /backend/ExceptionLog/
 # 一、异常处理
 
 1.【强制】Java 类库中定义的一类 `RuntimeException` 可以通过预先检查进行规避，而不应该 通过 `catch` 来处理，比如：`IndexOutOfBoundsException`，`NullPointerException` 等等。 说明：无法通过预检查的异常除外，如在解析一个外部传来的字符串形式数字时，通过 `catch NumberFormatException` 来实现。 
-正例：`if (obj != null) {...}` 
-反例：`try { obj.method() } catch (NullPointerException e) {...}` 
+正例：
+```java
+public class test {
+    public void test() {
+        if (obj != null) {
+           ...
+        }
+    }
+}
+```
+反例：
+```java
+public class test {
+    public void test() {
+        try {
+            obj.method();
+        } catch (NullPointerException e) {
+          ...
+        }
+    }
+}
+```
 
 2.【强制】异常不要用来做流程控制，条件控制，因为异常的处理效率比条件分支低。 
 
