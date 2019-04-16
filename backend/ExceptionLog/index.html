@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <title>异常日志 | MabuDoc Theme</title>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <meta name="description" content="Modern, powerful and simple theme for Hexo.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@0.1.0/source/img/suka-favicon.ico">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@0.1.0/source/img/suka-favicon.ico">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.3/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.3/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.3/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="/mabu-code-guide/style.min.css">
+    <link rel="stylesheet" href="/mabu-code-guide/markdown.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@0.1.0/source/lib/prism/prism-ghcolors.min.css">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hand-mabu.github.io/hexo-mabu-doc/">
+    <meta property="og:title" content="介绍 | MabuDoc Theme">
+    <meta property="og:description" content="Modern Simlpe Powerful Theme for hexo">
+    <meta property="og:image" content>
+</head>
+
+<body>
+    
+<header class="pt-2 pb-2">
+    <div class="container grid-lg navbar pt-2 pb-2">
+        <section class="navbar-section">
+            <a class="off-canvas-toggle btn btn-link btn-action" href="#sidebar"><i class="icon icon-menu"></i></a>
+            <a class="navbar-icon" href="https://hand-mabu.github.io/hexo-mabu-doc/">
+                <img src="/mabu-code-guide/assets/img/hexo-theme-suka.png">
+            </a>
+            <a href="https://hand-mabu.github.io/hexo-mabu-doc/" class="btn btn-link">
+                MabuDoc Theme</a>
+        </section>
+        <section class="navbar-section">
+            
+            <a href="/mabu-code-guide/backend/ExceptionLog/" class="btn btn-link navbar-link">简体中文</a>
+            
+        </section>
+    </div>
+</header>
+
+    <div class="off-canvas off-canvas-sidebar-show">
+
+        <div id="sidebar" class="off-canvas-sidebar">
+            
+
+<div class="docs-nav">
+    <div class="docs-search has-icon-left">
+        <i class="form-icon icon icon-search"></i>
+        <input id="search-field" class="form-input" type="text" placeholder="Search...">
+    </div>
+    <div id="search-result"></div>
+    <ul class="nav">
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/">
+        MABU 代码规范
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="javascript:void(0);">
+        前端
+    </a>
+</li><ul class="nav">
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/frontend/namingRules/">
+        命名规则
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/frontend/HTML/">
+        HTML
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/frontend/CSS_SCSS/">
+        CSS SCSS
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/frontend/JavaScript/">
+        JavaScript
+    </a>
+</li></ul>
+
+<li class="nav-item" style>
+    <a href="javascript:void(0);">
+        后端
+    </a>
+</li><ul class="nav">
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/ProgramRules/">
+        编程规约
+    </a>
+</li>
+
+<li class="nav-item active" style>
+    <a href="/mabu-code-guide/backend/ExceptionLog/">
+        异常日志
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/UnitTest/">
+        单元测试
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/SafetyRules/">
+        安全规约
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/MysqlDatabase/">
+        MYSQL数据库
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/EngineeringStructure/">
+        工程结构
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/ProperNoun/">
+        专有名词
+    </a>
+</li></ul>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/gitend/git/">
+        Git
+    </a>
+</li></ul>
+    <!-- <ul class="nav"> -->
+    <!-- 
+        <li class="nav-item">
+            <a href="/mabu-code-guide/en/config/">Theme Config</a>
+        </li>
+    -->
+    <!-- </ul> -->
+</div>
+        </div>
+
+        <a class="off-canvas-overlay" href="#close"></a>
+
+        <div class="off-canvas-content">
+            <div class="container px-0">
+                
+
+
+
+
+<div class="docs-header">
+    <div class="docs-header-wrapper">
+        <div class="title-wrapper">
+            <h1 class="docs-header-title mb-1">异常日志</h1>
+            
+        </div>
+        <!-- <span class="label label-rounded bg-dark mt-2">
+            <a class="docs-github" href="https://github.com/theme-suka/docs/tree/master/source/backend/ExceptionLog.md" target="_blank">在 GitHub 上编辑</a>
+        </span> -->
+    </div>
+</div>
+
+<div class="docs-content">
+    <div class="columns">
+        <div class="column col-9 col-lg-12 docs-content-section">
+            <div class="container px-0">
+                <div id="post-content">
+                    <h1 id="一、异常处理"><a href="#一、异常处理" class="headerlink" title="一、异常处理"></a>一、异常处理</h1><p>1.【强制】Java 类库中定义的一类 <code>RuntimeException</code> 可以通过预先检查进行规避，而不应该 通过 <code>catch</code> 来处理，比如：<code>IndexOutOfBoundsException</code>，<code>NullPointerException</code> 等等。 说明：无法通过预检查的异常除外，如在解析一个外部传来的字符串形式数字时，通过 <code>catch NumberFormatException</code> 来实现。<br>正例：</p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>obj <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+           <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>反例：</p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            obj<span class="token punctuation">.</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">NullPointerException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>2.【强制】异常不要用来做流程控制，条件控制，因为异常的处理效率比条件分支低。 </p>
+<p>3.【强制】对大段代码进行 <code>try-catch</code>，这是不负责任的表现。<code>catch</code> 时请分清稳定代码和非稳 定代码，稳定代码指的是无论如何不会出错的代码。对于非稳定代码的 <code>catch</code> 尽可能进行区分 异常类型，再做对应的异常处理。</p>
+<p>4.【强制】捕获异常是为了处理它，不要捕获了却什么都不处理而抛弃之，如果不想处理它，请 将该异常抛给它的调用者。最外层的业务使用者，必须处理异常，将其转化为用户可以理解的 内容。</p>
+<p>5.【强制】有 <code>try</code> 块放到了事务代码中，<code>catch</code> 异常后，如果需要回滚事务，一定要注意手动回 滚事务。</p>
+<p>6.【强制】finally 块必须对资源对象、流对象进行关闭，有异常也要做 <code>try-catch</code>。 说明：如果 JDK7 及以上，可以使用 <code>try-with-resources</code> 方式。</p>
+<p>7.【强制】不能在 <code>finally</code> 块中使用 <code>return，finally</code> 块中的 <code>return</code> 返回后方法结束执行，不 会再执行 <code>try</code> 块中的 <code>return</code> 语句。</p>
+<p>8.【强制】捕获异常与抛异常，必须是完全匹配，或者捕获异常是抛异常的父类。 说明：如果预期对方抛的是绣球，实际接到的是铅球，就会产生意外情况。</p>
+<p>9.【推荐】方法的返回值可以为 <code>null</code>，不强制返回空集合，或者空对象等，必须添加注释充分 说明什么情况下会返回 <code>null</code> 值。调用方需要进行 <code>null</code> 判断防止 <code>NPE</code> 问题。<br>说明：本手册明确防止 <code>NPE</code> 是调用者的责任。即使被调用方法返回空集合或者空对象，对调用 者来说，也并非高枕无忧，必须考虑到远程调用失败、序列化失败、运行时异常等场景返回 <code>null</code> 的情况。</p>
+<p>10.【推荐】防止 <code>NPE</code>，是程序员的基本修养，注意 <code>NPE</code> 产生的场景：</p>
+<ul>
+<li>返回类型为基本数据类型，<code>return</code> 包装数据类型的对象时，自动拆箱有可能产生 <code>NPE</code>。<br>反例：<code>public int f() { return Integer 对象}</code>， 如果为 <code>null</code>，自动解箱抛 <code>NPE</code>。</li>
+<li>数据库的查询结果可能为 <code>null</code>。</li>
+<li>集合里的元素即使 <code>isNotEmpty</code>，取出的数据元素也可能为 <code>null</code>。</li>
+<li>远程调用返回对象时，一律要求进行空指针判断，防止 <code>NPE</code>。</li>
+<li>对于 <code>Session</code> 中获取的数据，建议 <code>NPE</code> 检查，避免空指针。</li>
+<li>级联调用 <code>obj.getA().getB().getC()</code>；一连串调用，易产生 <code>NPE</code>。<br>正例：使用 JDK8 的 <code>Optional</code> 类来防止 <code>NPE</code> 问题。</li>
+</ul>
+<p>11.【推荐】定义时区分 <code>unchecked / checked</code> 异常，避免直接抛出 <code>new RuntimeException()</code>， 更不允许抛出 <code>Exception</code> 或者 <code>Throwable</code>，应使用有业务含义的自定义异常。推荐业界已定义 过的自定义异常，如：<code>DAOException / ServiceException</code> 等。</p>
+<p>12.【参考】在代码中使用“抛异常”还是“返回错误码”，对于公司外的 <code>http/api</code> 开放接口必须 使用“错误码”；而应用内部推荐异常抛出；跨应用间 RPC 调用优先考虑使用 <code>Result</code> 方式，封 装 <code>isSuccess()</code>方法、“错误码”、“错误简短信息”。<br>说明：关于 <code>RPC</code> 方法返回方式使用 <code>Result</code> 方式的理由：</p>
+<ul>
+<li>使用抛异常返回方式，调用方如果没有捕获到就会产生运行时错误。</li>
+<li>如果不加栈信息，只是 <code>new</code> 自定义异常，加入自己的理解的 <code>error message</code>，对于调用 端解决问题的帮助不会太多。如果加了栈信息，在频繁调用出错的情况下，数据序列化和传输 的性能损耗也是问题。</li>
+</ul>
+<p>13.【参考】避免出现重复的代码（Don’t Repeat Yourself），即 DRY 原则。<br>说明：随意复制和粘贴代码，必然会导致代码的重复，在以后需要修改时，需要修改所有的副 本，容易遗漏。必要时抽取共性方法，或者抽象公共类，甚至是组件化。<br>正例：一个类中有多个 <code>public</code> 方法，都需要进行数行相同的参数校验操作，这个时候请抽取： <code>private boolean checkParam(DTO dto) {...}</code> </p>
+<h1 id="二、日志规约"><a href="#二、日志规约" class="headerlink" title="二、日志规约"></a>二、日志规约</h1><p>1.【强制】应用中不可直接使用日志系统（Log4j、Logback）中的 API，而应依赖使用日志框架 SLF4J 中的 API，使用门面模式的日志框架，有利于维护和各个类的日志处理方式统一。 </p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">import</span> org<span class="token punctuation">.</span>slf4j<span class="token punctuation">.</span>Logger<span class="token punctuation">;</span>  
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>slf4j<span class="token punctuation">.</span>LoggerFactory<span class="token punctuation">;</span> 
+<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> Logger logger <span class="token operator">=</span> LoggerFactory<span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span>Abc<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+</code></pre>
+<p>2.【强制】日志文件推荐至少保存 15 天，因为有些异常具备以“周”为频次发生的特点。</p>
+<p>3.【强制】应用中的扩展日志（如打点、临时监控、访问日志等）命名方式：<code>appName_logType_logName.log</code>。logType:日志类型，推荐分类有 <code>stats/desc/monitor/visit</code> 等；logName:日志描述。这种命名的好处：通过文件名就可知 道日志文件属于什么应用，什么类型，什么目的，也有利于归类查找。<br>正例：<code>mppserver</code> 应用中单独监控时区转换异常，如：<code>mppserver_monitor_timeZoneConvert.log</code><br>说明：推荐对日志进行分类，如将错误日志和业务日志分开存放，便于开发人员查看，也便于 通过日志对系统进行及时监控。</p>
+<p>4.【强制】对 <code>trace/debug/info</code> 级别的日志输出，必须使用条件输出形式或者使用占位符的方 式。<br>说明：<code>logger.debug(&quot;Processing trade with id: &quot; + id + &quot; and symbol: &quot; + symbol);</code> 如果日志级别是 <code>warn</code>，上述日志不会打印，但是会执行字符串拼接操作，如果 <code>symbol</code> 是对象， 会执行 <code>toString()</code>方法，浪费了系统资源，执行了上述操作，最终日志却没有打印。<br>正例：（条件）</p>
+<pre class=" highlight language-java"><code class="language-java"> <span class="token keyword">if</span> <span class="token punctuation">(</span>logger<span class="token punctuation">.</span><span class="token function">isDebugEnabled</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            logger<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">"Processing trade with id: "</span> <span class="token operator">+</span> id <span class="token operator">+</span> <span class="token string">" and symbol: "</span> <span class="token operator">+</span> symbol<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+</code></pre>
+<p>正例：（占位符）<br><code>logger.debug(&quot;Processing trade with id: {} and symbol : {} &quot;, id, symbol);</code></p>
+<p>5.【强制】避免重复打印日志，浪费磁盘空间，务必在 <code>log4j.xml</code> 中设置 <code>additivity=false</code>。<br>正例：<code>&lt;logger name=&quot;com.taobao.dubbo.config&quot; additivity=&quot;false&quot;&gt;</code> </p>
+<p>6.【强制】异常信息应该包括两类信息：案发现场信息和异常堆栈信息。如果不处理，那么通过 关键字 <code>throws</code> 往上抛出。<br>正例：<code>logger.error</code>(各类参数或者对象 <code>toString + &quot;_&quot; + e.getMessage(), e)</code>; </p>
+<p>7.【推荐】谨慎地记录日志。生产环境禁止输出 <code>debug</code> 日志；有选择地输出 <code>info</code> 日志；如果使 用 <code>warn</code> 来记录刚上线时的业务行为信息，一定要注意日志输出量的问题，避免把服务器磁盘 撑爆，并记得及时删除这些观察日志。<br>说明：大量地输出无效日志，不利于系统性能提升，也不利于快速定位错误点。记录日志时请 思考：这些日志真的有人看吗？看到这条日志你能做什么？能不能给问题排查带来好处？</p>
+<p>8.【参考】可以使用 <code>warn</code> 日志级别来记录用户输入参数错误的情况，避免用户投诉时，无所适 从。注意日志输出的级别，<code>error</code> 级别只记录系统逻辑出错、异常等重要的错误信息。如非必 要，请不要在此场景打出<code>error</code> 级别。</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="column col-3 hide-lg docs-toc-section">
+            <div class="container px-0">
+                <div id="post-toc">
+                    
+                        <p class="h4 text-bold">目录</p>
+                        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、异常处理"><span class="post-toc-text">一、异常处理</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、日志规约"><span class="post-toc-text">二、日志规约</span></a></li></ol>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <p class="mb-2"><a href="https://hand-mabu.github.io/mabu-code-guide/" target="_blank">Home</a> · <a href="https://github.com/hand-mabu/mabu-code-guide" target="_blank">GitHub</a>
+    </p><p>Designed and built with by <a href="https://github.com/hand-mabu" target="_blank">MABU</a>. Licensed under the <a href="https://github.com/hand-mabu/mabu-code-guide/blob/dev/LICENSE" target="_blank">GPL V3 License</a>.</p>
+</footer>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <script src="/mabu-code-guide/jquery.min.js"></script>
+    <script src="/mabu-code-guide/index.js"></script>
+    <script src="/mabu-code-guide/local-search.min.js"></script>
+    <script>
+        searchFunc('/mabu-code-guide/search.json')
+    </script>
+</body>
+
+</html>

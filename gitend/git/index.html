@@ -2,7 +2,7 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <title>git规范 | MabuDoc Theme</title>
+    <title>Git规范 | MabuDoc Theme</title>
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
     <meta name="description" content="Modern, powerful and simple theme for Hexo.">
@@ -97,11 +97,53 @@
     <a href="javascript:void(0);">
         后端
     </a>
+</li><ul class="nav">
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/ProgramRules/">
+        编程规约
+    </a>
 </li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/ExceptionLog/">
+        异常日志
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/UnitTest/">
+        单元测试
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/SafetyRules/">
+        安全规约
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/MysqlDatabase/">
+        MYSQL数据库
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/EngineeringStructure/">
+        工程结构
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/ProperNoun/">
+        专有名词
+    </a>
+</li></ul>
 
 <li class="nav-item active" style>
     <a href="/mabu-code-guide/gitend/git/">
-        git
+        Git
     </a>
 </li></ul>
     <!-- <ul class="nav"> -->
@@ -126,9 +168,9 @@
 <div class="docs-header">
     <div class="docs-header-wrapper">
         <div class="title-wrapper">
-            <h1 class="docs-header-title mb-1">git规范</h1>
+            <h1 class="docs-header-title mb-1">Git规范</h1>
             
-                <p class="h4 mb-2">git提交相关规范明细</p>
+                <p class="h4 mb-2">Git提交相关规范明细</p>
             
         </div>
         <!-- <span class="label label-rounded bg-dark mt-2">
@@ -142,13 +184,13 @@
         <div class="column col-9 col-lg-12 docs-content-section">
             <div class="container px-0">
                 <div id="post-content">
-                    <h2 id="分支命名"><a href="#分支命名" class="headerlink" title="分支命名"></a>分支命名</h2><p>分支对于一个团队或者用户来说起到标识和<strong>版本控制</strong>的作用。</p>
-<h3 id="BRANCH"><a href="#BRANCH" class="headerlink" title="BRANCH"></a>BRANCH</h3><h4 id="自己的分支"><a href="#自己的分支" class="headerlink" title="自己的分支"></a>自己的分支</h4><p>使用 项目名称 + 下划线 + 名字缩写 或者 名字缩写 命名</p>
+                    <h1 id="分支命名"><a href="#分支命名" class="headerlink" title="分支命名"></a>分支命名</h1><p>分支对于一个团队或者用户来说起到标识和<strong>版本控制</strong>的作用。</p>
+<h2 id="BRANCH"><a href="#BRANCH" class="headerlink" title="BRANCH"></a>BRANCH</h2><h3 id="自己的分支"><a href="#自己的分支" class="headerlink" title="自己的分支"></a>自己的分支</h3><p>使用 项目名称 + 下划线 + 名字缩写 或者 名字缩写 命名</p>
 <blockquote>
 <p>举例： <code>hdm_xg</code> / <code>xg</code><br>注意： 均使用小写 </p>
 </blockquote>
-<h4 id="特殊分支"><a href="#特殊分支" class="headerlink" title="特殊分支"></a>特殊分支</h4><p>特殊分支的命名需要根据项目来定。</p>
-<h3 id="TAG"><a href="#TAG" class="headerlink" title="TAG"></a>TAG</h3><p>使用 <code>tag</code> 完成版本控制。</p>
+<h3 id="特殊分支"><a href="#特殊分支" class="headerlink" title="特殊分支"></a>特殊分支</h3><p>特殊分支的命名需要根据项目来定。</p>
+<h2 id="TAG"><a href="#TAG" class="headerlink" title="TAG"></a>TAG</h2><p>使用 <code>tag</code> 完成版本控制。</p>
 <p>大家可以注意到，一般的项目版本格式是 <code>1.0.0-release</code> 这样，简要说明一下版本的格式</p>
 <p>以 <code>1.0.0</code> 举例:<br>第一位数表示项目大版本，只有出现大的功能型变更才会变更第一位数<br>第二位数表示小功能的变更，增加或修订了重大bug可以变更第二位数<br>第三位数表示功能的修复，一般一段时间修复了若干bug才会变更第三位数</p>
 <p>我们一般提供 <code>release</code> 和 <code>snapshot</code> 两个大版本</p>
@@ -159,15 +201,15 @@
 <blockquote>
 <p>我们尽量参考 <code>Linux</code> 的发布模式，正式版用偶数的形式发出</p>
 </blockquote>
-<h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p>使用 <code>git</code> 进行提交时，要遵循如下规范:</p>
+<h1 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h1><p>使用 <code>git</code> 进行提交时，要遵循如下规范:</p>
 <p><code>git</code> 完成一个正常的提交应该有如下操作</p>
-<h3 id="应用端"><a href="#应用端" class="headerlink" title="应用端"></a>应用端</h3><ul>
+<h2 id="应用端"><a href="#应用端" class="headerlink" title="应用端"></a>应用端</h2><ul>
 <li>简要查看此次修改的内容</li>
 <li>一键拉取最新代码</li>
 <li>编写 <code>commit</code></li>
 <li>请求 <code>merge</code> 到 <code>主分支</code></li>
 </ul>
-<h3 id="使用命令端提交-建议配合-github-desktop-使用"><a href="#使用命令端提交-建议配合-github-desktop-使用" class="headerlink" title="使用命令端提交(建议配合 github desktop 使用)"></a>使用命令端提交(建议配合 <code>github desktop</code> 使用)</h3><ul>
+<h2 id="使用命令端提交-建议配合-github-desktop-使用"><a href="#使用命令端提交-建议配合-github-desktop-使用" class="headerlink" title="使用命令端提交(建议配合 github desktop 使用)"></a>使用命令端提交(建议配合 <code>github desktop</code> 使用)</h2><ul>
 <li><code>git status</code> (简要查看此次修改的内容)</li>
 <li><code>git add .</code> (增加此次提交的全部内容，也可以分批次 <code>add</code>)</li>
 <li><code>git commit -m &quot;commit描述&quot;</code> (增加此次提交的描述)</li>
@@ -175,32 +217,32 @@
 <li><code>git push origin xxx</code> (提交到自己的分支上去)</li>
 <li>请求 <code>merge</code> 到 <code>主分支</code></li>
 </ul>
-<h3 id="Commit-规范"><a href="#Commit-规范" class="headerlink" title="Commit 规范"></a>Commit 规范</h3><p>在 <code>git commit</code> 时，需要添加针对本次提交的描述，描述应该包括此次提交的动作 + 空格 + 一小段描述，详细提交动作如下:</p>
-<h4 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h4><h5 id="ADD"><a href="#ADD" class="headerlink" title="[ADD]"></a>[ADD]</h5><p>新增某个功能时使用</p>
+<h2 id="Commit-规范"><a href="#Commit-规范" class="headerlink" title="Commit 规范"></a>Commit 规范</h2><p>在 <code>git commit</code> 时，需要添加针对本次提交的描述，描述应该包括此次提交的动作 + 空格 + 一小段描述，详细提交动作如下:</p>
+<h3 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h3><h4 id="ADD"><a href="#ADD" class="headerlink" title="[ADD]"></a>[ADD]</h4><p>新增某个功能时使用</p>
 <blockquote>
 <p>举例： <code>git commit -m &quot;[ADD] 新增消息推送功能&quot;</code> </p>
 </blockquote>
-<h5 id="IMP"><a href="#IMP" class="headerlink" title="[IMP]"></a>[IMP]</h5><p>基于现有的功能完成优化、修改时使用。</p>
+<h4 id="IMP"><a href="#IMP" class="headerlink" title="[IMP]"></a>[IMP]</h4><p>基于现有的功能完成优化、修改时使用。</p>
 <blockquote>
 <p>举例： <code>git commit -m &quot;[IMP] 优化消息同步功能&quot;</code> </p>
 </blockquote>
-<h5 id="FIX"><a href="#FIX" class="headerlink" title="[FIX]"></a>[FIX]</h5><p>修复某块 <code>BUG</code> 时使用。</p>
+<h4 id="FIX"><a href="#FIX" class="headerlink" title="[FIX]"></a>[FIX]</h4><p>修复某块 <code>BUG</code> 时使用。</p>
 <blockquote>
 <p>举例： <code>git commit -m &quot;[FIX] 修复消息无法持久的bug&quot;</code> </p>
 </blockquote>
-<h4 id="不常用"><a href="#不常用" class="headerlink" title="不常用"></a>不常用</h4><h5 id="INIT"><a href="#INIT" class="headerlink" title="[INIT]"></a>[INIT]</h5><p>初始化某个项目、模块时使用。</p>
+<h3 id="不常用"><a href="#不常用" class="headerlink" title="不常用"></a>不常用</h3><h4 id="INIT"><a href="#INIT" class="headerlink" title="[INIT]"></a>[INIT]</h4><p>初始化某个项目、模块时使用。</p>
 <blockquote>
 <p>举例： <code>git commit -m &quot;[INIT] 初始化kafka模块&quot;</code> </p>
 </blockquote>
-<h5 id="REM"><a href="#REM" class="headerlink" title="[REM]"></a>[REM]</h5><p>删除项目不再需要的文件或模块时使用。</p>
+<h4 id="REM"><a href="#REM" class="headerlink" title="[REM]"></a>[REM]</h4><p>删除项目不再需要的文件或模块时使用。</p>
 <blockquote>
 <p>举例： <code>git commit -m &quot;[REM] 移除消息推送中不再使用的方法&quot;</code> </p>
 </blockquote>
-<h5 id="REF"><a href="#REF" class="headerlink" title="[REF]"></a>[REF]</h5><p>重构项目中某块功能或模块时使用。</p>
+<h4 id="REF"><a href="#REF" class="headerlink" title="[REF]"></a>[REF]</h4><p>重构项目中某块功能或模块时使用。</p>
 <blockquote>
 <p>举例： <code>git commit -m &quot;[REF] 重构消息消费模块&quot;</code> </p>
 </blockquote>
-<h2 id="合并主分支"><a href="#合并主分支" class="headerlink" title="合并主分支"></a>合并主分支</h2><p>依据不同项目，前面的步骤过后，需要将代码合并至<strong>主分支</strong>(此时代码还在自己的分支)，发起合并请求后，在描述区域写清楚此次提交全部变动，不管是给代码合并者，或是所有人一个预览的作用。</p>
+<h1 id="合并主分支"><a href="#合并主分支" class="headerlink" title="合并主分支"></a>合并主分支</h1><p>依据不同项目，前面的步骤过后，需要将代码合并至<strong>主分支</strong>(此时代码还在自己的分支)，发起合并请求后，在描述区域写清楚此次提交全部变动，不管是给代码合并者，或是所有人一个预览的作用。</p>
 <p>举例：</p>
 <pre><code>    1. 新增消息推送功能(StartMQ)
     2. 修复用户管理刷新的bug
@@ -218,7 +260,7 @@
                 <div id="post-toc">
                     
                         <p class="h4 text-bold">目录</p>
-                        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分支命名"><span class="post-toc-text">分支命名</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#BRANCH"><span class="post-toc-text">BRANCH</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#自己的分支"><span class="post-toc-text">自己的分支</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#特殊分支"><span class="post-toc-text">特殊分支</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TAG"><span class="post-toc-text">TAG</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#提交"><span class="post-toc-text">提交</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#应用端"><span class="post-toc-text">应用端</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用命令端提交-建议配合-github-desktop-使用"><span class="post-toc-text">使用命令端提交(建议配合 github desktop 使用)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Commit-规范"><span class="post-toc-text">Commit 规范</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#常用"><span class="post-toc-text">常用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#ADD"><span class="post-toc-text">[ADD]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#IMP"><span class="post-toc-text">[IMP]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#FIX"><span class="post-toc-text">[FIX]</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#不常用"><span class="post-toc-text">不常用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#INIT"><span class="post-toc-text">[INIT]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#REM"><span class="post-toc-text">[REM]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#REF"><span class="post-toc-text">[REF]</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#合并主分支"><span class="post-toc-text">合并主分支</span></a></li></ol>
+                        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#分支命名"><span class="post-toc-text">分支命名</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#BRANCH"><span class="post-toc-text">BRANCH</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自己的分支"><span class="post-toc-text">自己的分支</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特殊分支"><span class="post-toc-text">特殊分支</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#TAG"><span class="post-toc-text">TAG</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#提交"><span class="post-toc-text">提交</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#应用端"><span class="post-toc-text">应用端</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用命令端提交-建议配合-github-desktop-使用"><span class="post-toc-text">使用命令端提交(建议配合 github desktop 使用)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Commit-规范"><span class="post-toc-text">Commit 规范</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常用"><span class="post-toc-text">常用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ADD"><span class="post-toc-text">[ADD]</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#IMP"><span class="post-toc-text">[IMP]</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#FIX"><span class="post-toc-text">[FIX]</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#不常用"><span class="post-toc-text">不常用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#INIT"><span class="post-toc-text">[INIT]</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#REM"><span class="post-toc-text">[REM]</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#REF"><span class="post-toc-text">[REF]</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#合并主分支"><span class="post-toc-text">合并主分支</span></a></li></ol>
                     
                 </div>
             </div>

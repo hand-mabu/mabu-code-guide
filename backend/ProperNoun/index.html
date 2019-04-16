@@ -2,7 +2,7 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <title>MABU 代码规范 | MabuDoc Theme</title>
+    <title>专有名词 | MabuDoc Theme</title>
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
     <meta name="description" content="Modern, powerful and simple theme for Hexo.">
@@ -38,7 +38,7 @@
         </section>
         <section class="navbar-section">
             
-            <a href="/mabu-code-guide/" class="btn btn-link navbar-link">English</a>
+            <a href="/mabu-code-guide/backend/ProperNoun/" class="btn btn-link navbar-link">简体中文</a>
             
         </section>
     </div>
@@ -57,7 +57,7 @@
     <div id="search-result"></div>
     <ul class="nav">
 
-<li class="nav-item active" style>
+<li class="nav-item" style>
     <a href="/mabu-code-guide/">
         MABU 代码规范
     </a>
@@ -135,7 +135,7 @@
     </a>
 </li>
 
-<li class="nav-item" style>
+<li class="nav-item active" style>
     <a href="/mabu-code-guide/backend/ProperNoun/">
         专有名词
     </a>
@@ -149,7 +149,7 @@
     <!-- <ul class="nav"> -->
     <!-- 
         <li class="nav-item">
-            <a href="/mabu-code-guide/config/">Theme Config</a>
+            <a href="/mabu-code-guide/en/config/">Theme Config</a>
         </li>
     -->
     <!-- </ul> -->
@@ -168,13 +168,11 @@
 <div class="docs-header">
     <div class="docs-header-wrapper">
         <div class="title-wrapper">
-            <h1 class="docs-header-title mb-1">MABU 代码规范</h1>
-            
-                <p class="h4 mb-2">吸取各大项目经验和规范结合自身情况总结而出</p>
+            <h1 class="docs-header-title mb-1">专有名词</h1>
             
         </div>
         <!-- <span class="label label-rounded bg-dark mt-2">
-            <a class="docs-github" href="https://github.com/theme-suka/docs/tree/master/source/index.md" target="_blank">在 GitHub 上编辑</a>
+            <a class="docs-github" href="https://github.com/theme-suka/docs/tree/master/source/backend/ProperNoun.md" target="_blank">在 GitHub 上编辑</a>
         </span> -->
     </div>
 </div>
@@ -184,32 +182,20 @@
         <div class="column col-9 col-lg-12 docs-content-section">
             <div class="container px-0">
                 <div id="post-content">
-                    <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><ul>
-<li><a href="./frontend/namingRules">命名规范</a></li>
-<li><a href="./frontend/HTML/">HTML规范</a></li>
-<li><a href="./frontend/CSS_SCSS/">CSS/SCSS规范</a></li>
-<li><a href="./frontend/JavaScript/">JavaScript规范</a></li>
-</ul>
-<h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><ul>
-<li><a href="./backend/ProgramRules/">编程规约</a></li>
-<li><a href="./backend/ExceptionLog/">异常日志</a></li>
-<li><a href="./backend/UnitTest/">单元测试</a></li>
-<li><a href="./backend/SafetyRules/">安全规约</a></li>
-<li><a href="./backend/MysqlDatabase/">MYSQL数据库</a></li>
-<li><a href="./backend/EngineeringStructure/">工程结构</a></li>
-<li><a href="./backend/ProperNoun/">专有名词</a></li>
-</ul>
-<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><ul>
-<li><a href="./gitend/git/#分支命名">分支命名规范</a></li>
-<li><a href="./gitend/git/#提交">代码提交规范</a></li>
-<li><a href="./gitend/git/#合并主分支">合并代码规范</a></li>
-</ul>
-<hr>
-<p>鸣谢:</p>
-<ul>
-<li>阿里巴巴后端规范手册</li>
-<li><a href="http://alloyteam.github.io/CodeGuide/" target="_blank" rel="noopener">AlloyTeam</a> 前端规范</li>
-</ul>
+                    <p>1.<code>POJO（Plain Ordinary Java Object）</code>: 在本手册中，<code>POJO</code> 专指只有 <code>setter / getter / toString</code>的简单类，包括<code>DO/DTO/BO/VO</code> 等。</p>
+<p>2.<code>GAV（GroupId、ArtifactctId、Version）: Maven</code>坐标，是用来唯一标识 jar 包。</p>
+<p>3.<code>OOP（Object Oriented Programming）</code>: 本手册泛指类、对象的编程处理方式。</p>
+<p>4.<code>ORM（Object Relation Mapping）</code>: 对象关系映射，对象领域模型与底层数据之间的转换，</p>
+<p>本文泛指 <code>iBATIS</code>, <code>mybatis</code> 等框架。</p>
+<p>5.<code>NPE（java.lang.NullPointerException）</code>: 空指针异常。</p>
+<p>6.<code>SOA（Service-Oriented Architecture）</code>: 面向服务架构，它可以根据需求通过网络对松散</p>
+<p>耦合的粗粒度应用组件进行分布式部署、组合和使用，有利于提升组件可重用性，可维护性。</p>
+<p>7.一方库: 本工程内部子项目模块依赖的库（jar 包）。</p>
+<p>8.二方库: 公司内部发布到中央仓库，可供公司内部其它应用依赖的库（jar 包）。</p>
+<p>9.三方库: 公司之外的开源库（jar 包）。</p>
+<p>10.<code>IDE（Integrated Development Environment）</code>: 用于提供程序开发环境的应用程序，一</p>
+<p>般包括代码编辑器、编译器、调试器和图形用户界面等工具，本《手册》泛指 <code>IntelliJ IDEA</code></p>
+<p>和<code>eclipse</code>。</p>
 
                 </div>
             </div>
@@ -217,9 +203,6 @@
         <div class="column col-3 hide-lg docs-toc-section">
             <div class="container px-0">
                 <div id="post-toc">
-                    
-                        <p class="h4 text-bold">目录</p>
-                        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#目录"><span class="post-toc-text">目录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前端"><span class="post-toc-text">前端</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#后端"><span class="post-toc-text">后端</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Git"><span class="post-toc-text">Git</span></a></li></ol></li></ol>
                     
                 </div>
             </div>

@@ -97,11 +97,53 @@
     <a href="javascript:void(0);">
         后端
     </a>
+</li><ul class="nav">
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/ProgramRules/">
+        编程规约
+    </a>
 </li>
 
 <li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/ExceptionLog/">
+        异常日志
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/UnitTest/">
+        单元测试
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/SafetyRules/">
+        安全规约
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/MysqlDatabase/">
+        MYSQL数据库
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/EngineeringStructure/">
+        工程结构
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/ProperNoun/">
+        专有名词
+    </a>
+</li></ul>
+
+<li class="nav-item" style>
     <a href="/mabu-code-guide/gitend/git/">
-        git
+        Git
     </a>
 </li></ul>
     <!-- <ul class="nav"> -->
@@ -140,24 +182,26 @@
         <div class="column col-9 col-lg-12 docs-content-section">
             <div class="container px-0">
                 <div id="post-content">
-                    <h4 id="1、缩进"><a href="#1、缩进" class="headerlink" title="1、缩进"></a>1、缩进</h4><p>使用soft table（4个空格）。</p>
-<pre><code>.element{
-    position: absolution;
-    top: 10px;
-    left: 10px;
+                    <h1 id="1、缩进"><a href="#1、缩进" class="headerlink" title="1、缩进"></a>1、缩进</h1><p>使用soft table（4个空格）。</p>
+<pre class=" highlight language-css"><code class="language-css"><span class="token selector"><span class="token class">.element</span></span><span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolution<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
 
-    border-radius: 10px;
-    width: 50px;
-    height:50px;
-}
-</code></pre><h4 id="2、分号"><a href="#2、分号" class="headerlink" title="2、分号"></a>2、分号</h4><p>每个属性声明末位都要加分号。</p>
-<pre><code>.element{
-    width: 20px;
-    height: 20px;
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span><span class="token number">50</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="2、分号"><a href="#2、分号" class="headerlink" title="2、分号"></a>2、分号</h1><p>每个属性声明末位都要加分号。</p>
+<pre class=" highlight language-css"><code class="language-css"><span class="token selector"><span class="token class">.element</span></span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
 
-    background-color: red;
-}
-</code></pre><h4 id="3、空格"><a href="#3、空格" class="headerlink" title="3、空格"></a>3、空格</h4><ul>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="3、空格"><a href="#3、空格" class="headerlink" title="3、空格"></a>3、空格</h1><ul>
 <li><strong>以下几种情况不需要空格：</strong><ul>
 <li>属性名后；</li>
 <li>多个规则的分隔符<code>,</code>前；</li>
@@ -179,239 +223,722 @@
 </ul>
 </li>
 </ul>
-<pre><code>/* not good */
-.element {
-    color :red! important;
-    background-color: rgba(0,0,0,.5);
-}
+<pre class=" highlight language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span> <span class="token punctuation">:</span>red! important<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-/* good */
-.element {
-    color: red !important;
-    background-color: rgba(0, 0, 0, .5);
-}
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-/* not good */
-.element ,
-.dialog{
-    ...
-}
+<span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector"><span class="token class">.element</span> ,
+<span class="token class">.dialog</span></span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
 
-/* good */
-.element,
-.dialog {
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector"><span class="token class">.element</span>,
+<span class="token class">.dialog</span> </span><span class="token punctuation">{</span>
 
-}
+<span class="token punctuation">}</span>
 
-/* not good */
-.element&gt;.dialog{
-    ...
-}
+<span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector"><span class="token class">.element</span>><span class="token class">.dialog</span></span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
 
-/* good */
-.element &gt; .dialog{
-    ...
-}
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector"><span class="token class">.element</span> > <span class="token class">.dialog</span></span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
 
-/* not good */
-.element{
-    ...
-}
+<span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector"><span class="token class">.element</span></span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
 
-/* good */
-.element {
-    ...
-}
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
 
-/* not good */
-@if{
-    ...
-}@else{
-    ...
-}
+<span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token atrule"><span class="token rule">@if</span></span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span><span class="token atrule"><span class="token rule">@else</span></span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
 
-/* good */
-@if {
-    ...
-} @else {
-    ...
-}
-</code></pre><h4 id="4、空行"><a href="#4、空行" class="headerlink" title="4、空行"></a>4、空行</h4><p>以下几种情况需要换行：</p>
-<ul>
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token atrule"><span class="token rule">@if</span></span> <span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span> <span class="token atrule"><span class="token rule">@else</span></span> <span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="4、空行"><a href="#4、空行" class="headerlink" title="4、空行"></a>4、空行</h1><ul>
+<li><strong>以下几种情况需要换行：</strong><ul>
 <li>文件最后保留一个空行；</li>
 <li><code>}</code>后最好跟一个空行，包括scss中嵌套的规则；</li>
-<li>属性之间需要适当的空行，具体见【<strong><em>9、属性声明顺序</em></strong>】；<br><code>`</code><br>/<em> not good </em>/<br>.element {<br> …<br>}<br>.dialog {<br> color: red;<br> &amp;:after {<pre><code> ...
-</code></pre> }<br>}</li>
+<li>属性之间需要适当的空行，具体见 <strong><a href="#9、属性声明顺序">属性声明顺序</a></strong> ；</li>
 </ul>
-<p>/<em> good </em>/<br>.element {<br>    …<br>}</p>
-<p>.dialog {<br>    color: red;</p>
-<pre><code>&amp;:after {
-    ...
-}
-</code></pre><p>}</p>
-<pre><code>
-#### 5、换行
- - 以下几种情况不需要换行：
-    - `{`前；
- - 以下几种情况需要换行：
-    - `{`后和`}`前；
-    - 每个属性独占一行；
-    - 多个规则的分隔符`,`后；
-</code></pre><p>/<em> not good </em>/<br>.element<br>{color: red; background-color: black;}</p>
-<p>/<em> good </em>/<br>.element {<br>    color: red;<br>    background-color: black;<br>}</p>
-<p>/<em> not good </em>/<br>.element, .dialog {<br>    …<br>}</p>
-<p>/<em> good </em>/<br>.element,<br>.dialog {<br>    …<br>}</p>
-<pre><code>
-#### 6、注释
-注释统一用`/* */`（scss中也不要用`//`），具体参照下面的写法；
+</li>
+</ul>
+<pre class=" highlight language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.dialog</span> </span><span class="token punctuation">{</span>
+    <span class="token selector">color: red;
+    &amp;<span class="token pseudo-element">:after</span> </span><span class="token punctuation">{</span>
+        <span class="token number">...</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-缩进与下一行代码保持一致；
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
 
-可位于一个代码行的末尾，与代码间隔一个空格。 
-</code></pre><p>/<em> Modal header </em>/<br>.modal-header {<br>    …<br>}</p>
-<p>/*</p>
+<span class="token selector"><span class="token class">.dialog</span> </span><span class="token punctuation">{</span>
+    <span class="token selector">color: red;
+
+    &amp;<span class="token pseudo-element">:after</span> </span><span class="token punctuation">{</span>
+        <span class="token number">...</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="5、换行"><a href="#5、换行" class="headerlink" title="5、换行"></a>5、换行</h1><ul>
+<li><strong>以下几种情况不需要换行：</strong><ul>
+<li><code>{</code>前；</li>
+</ul>
+</li>
+<li><strong>以下几种情况需要换行：</strong><ul>
+<li><code>{</code>后和<code>}</code>前；</li>
+<li>每个属性独占一行；</li>
+<li>多个规则的分隔符<code>,</code>后；</li>
+</ul>
+</li>
+</ul>
+<pre class=" highlight language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector"><span class="token class">.element</span>
+</span><span class="token punctuation">{</span><span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span> <span class="token property">background-color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span><span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector"><span class="token class">.element</span>, <span class="token class">.dialog</span> </span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector"><span class="token class">.element</span>,
+<span class="token class">.dialog</span> </span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="6、注释"><a href="#6、注释" class="headerlink" title="6、注释"></a>6、注释</h1><p>注释统一用<code>/* */</code>（scss中也不要用<code>//</code>），具体参照下面的写法；</p>
+<p>缩进与下一行代码保持一致；</p>
+<p>可位于一个代码行的末尾，与代码间隔一个空格。 </p>
+<pre class=" highlight language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* Modal header */</span>
+<span class="token selector"><span class="token class">.modal-header</span> </span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/*
+ * Modal header
+ */</span>
+<span class="token selector"><span class="token class">.modal-header</span> </span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.modal-header</span> </span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/* 50px */</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* color red */</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="7、引号"><a href="#7、引号" class="headerlink" title="7、引号"></a>7、引号</h1><p>最外层统一使用双引号；</p>
+<p>url的内容要使用引号；</p>
+<p>属性选择器中的属性值需要引导；</p>
+<pre class=" highlight language-css"><code class="language-css"><span class="token selector"><span class="token class">.element</span><span class="token pseudo-element">:after</span> </span><span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url("logo.png")</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">li<span class="token attribute">[data-type="single"]</span> </span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="8、命名"><a href="#8、命名" class="headerlink" title="8、命名"></a>8、命名</h1><ul>
+<li>类名使用小写字母，以中划线分隔；</li>
+<li>id采用驼峰式命名；</li>
+<li>scss中的变量、函数、混合、placeholder采用驼峰式命名</li>
+</ul>
+<pre class=" highlight language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* class */</span>
+<span class="token selector"><span class="token class">.element-content</span> </span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* id */</span>
+<span class="token selector"><span class="token id">#myDialog</span> </span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* 变量 */</span>
+$<span class="token property">colorBlack</span><span class="token punctuation">:</span> <span class="token hexcode">#000</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/* 函数 */</span>
+<span class="token atrule"><span class="token rule">@function</span> <span class="token function">pxToRem</span><span class="token punctuation">(</span>$px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* 混合 */</span>
+<span class="token atrule"><span class="token rule">@mixin</span> centerBlock</span> <span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* placeholder */</span>
+<span class="token selector">%myDialog </span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="9、属性声明顺序"><a href="#9、属性声明顺序" class="headerlink" title="9、属性声明顺序"></a>9、属性声明顺序</h1><p>相关的属性声明按下面的顺序做分组处理，组之间需要有一个空行。</p>
+<pre class=" highlight language-css"><code class="language-css"><span class="token selector"><span class="token class">.declaration-order</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+    <span class="token property">float</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>
+
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">right</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">bottom</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">;</span>
+
+    <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid <span class="token hexcode">#e5e5e5</span><span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">3</span>px<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+
+    <span class="token property">font</span><span class="token punctuation">:</span> normal <span class="token number">13</span>px <span class="token string">"Helvetica Neue"</span>, sans-serif<span class="token punctuation">;</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">1.5</span><span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#333</span><span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#f5f5f5</span><span class="token punctuation">;</span>
+
+    <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* 下面是推荐的属性的顺序 */</span>
+[
+    [
+        <span class="token string">"display"</span>,
+        <span class="token string">"visibility"</span>,
+        <span class="token string">"float"</span>,
+        <span class="token string">"clear"</span>,
+        <span class="token string">"overflow"</span>,
+        <span class="token string">"overflow-x"</span>,
+        <span class="token string">"overflow-y"</span>,
+        <span class="token string">"clip"</span>,
+        <span class="token string">"zoom"</span>
+    ],
+    [
+        <span class="token string">"table-layout"</span>,
+        <span class="token string">"empty-cells"</span>,
+        <span class="token string">"caption-side"</span>,
+        <span class="token string">"border-spacing"</span>,
+        <span class="token string">"border-collapse"</span>,
+        <span class="token string">"list-style"</span>,
+        <span class="token string">"list-style-position"</span>,
+        <span class="token string">"list-style-type"</span>,
+        <span class="token string">"list-style-image"</span>
+    ],
+    [
+        <span class="token string">"-webkit-box-orient"</span>,
+        <span class="token string">"-webkit-box-direction"</span>,
+        <span class="token string">"-webkit-box-decoration-break"</span>,
+        <span class="token string">"-webkit-box-pack"</span>,
+        <span class="token string">"-webkit-box-align"</span>,
+        <span class="token string">"-webkit-box-flex"</span>
+    ],
+    [
+        <span class="token string">"position"</span>,
+        <span class="token string">"top"</span>,
+        <span class="token string">"right"</span>,
+        <span class="token string">"bottom"</span>,
+        <span class="token string">"left"</span>,
+        <span class="token string">"z-index"</span>
+    ],
+    [
+        <span class="token string">"margin"</span>,
+        <span class="token string">"margin-top"</span>,
+        <span class="token string">"margin-right"</span>,
+        <span class="token string">"margin-bottom"</span>,
+        <span class="token string">"margin-left"</span>,
+        <span class="token string">"-webkit-box-sizing"</span>,
+        <span class="token string">"-moz-box-sizing"</span>,
+        <span class="token string">"box-sizing"</span>,
+        <span class="token string">"border"</span>,
+        <span class="token string">"border-width"</span>,
+        <span class="token string">"border-style"</span>,
+        <span class="token string">"border-color"</span>,
+        <span class="token string">"border-top"</span>,
+        <span class="token string">"border-top-width"</span>,
+        <span class="token string">"border-top-style"</span>,
+        <span class="token string">"border-top-color"</span>,
+        <span class="token string">"border-right"</span>,
+        <span class="token string">"border-right-width"</span>,
+        <span class="token string">"border-right-style"</span>,
+        <span class="token string">"border-right-color"</span>,
+        <span class="token string">"border-bottom"</span>,
+        <span class="token string">"border-bottom-width"</span>,
+        <span class="token string">"border-bottom-style"</span>,
+        <span class="token string">"border-bottom-color"</span>,
+        <span class="token string">"border-left"</span>,
+        <span class="token string">"border-left-width"</span>,
+        <span class="token string">"border-left-style"</span>,
+        <span class="token string">"border-left-color"</span>,
+        <span class="token string">"-webkit-border-radius"</span>,
+        <span class="token string">"-moz-border-radius"</span>,
+        <span class="token string">"border-radius"</span>,
+        <span class="token string">"-webkit-border-top-left-radius"</span>,
+        <span class="token string">"-moz-border-radius-topleft"</span>,
+        <span class="token string">"border-top-left-radius"</span>,
+        <span class="token string">"-webkit-border-top-right-radius"</span>,
+        <span class="token string">"-moz-border-radius-topright"</span>,
+        <span class="token string">"border-top-right-radius"</span>,
+        <span class="token string">"-webkit-border-bottom-right-radius"</span>,
+        <span class="token string">"-moz-border-radius-bottomright"</span>,
+        <span class="token string">"border-bottom-right-radius"</span>,
+        <span class="token string">"-webkit-border-bottom-left-radius"</span>,
+        <span class="token string">"-moz-border-radius-bottomleft"</span>,
+        <span class="token string">"border-bottom-left-radius"</span>,
+        <span class="token string">"-webkit-border-image"</span>,
+        <span class="token string">"-moz-border-image"</span>,
+        <span class="token string">"-o-border-image"</span>,
+        <span class="token string">"border-image"</span>,
+        <span class="token string">"-webkit-border-image-source"</span>,
+        <span class="token string">"-moz-border-image-source"</span>,
+        <span class="token string">"-o-border-image-source"</span>,
+        <span class="token string">"border-image-source"</span>,
+        <span class="token string">"-webkit-border-image-slice"</span>,
+        <span class="token string">"-moz-border-image-slice"</span>,
+        <span class="token string">"-o-border-image-slice"</span>,
+        <span class="token string">"border-image-slice"</span>,
+        <span class="token string">"-webkit-border-image-width"</span>,
+        <span class="token string">"-moz-border-image-width"</span>,
+        <span class="token string">"-o-border-image-width"</span>,
+        <span class="token string">"border-image-width"</span>,
+        <span class="token string">"-webkit-border-image-outset"</span>,
+        <span class="token string">"-moz-border-image-outset"</span>,
+        <span class="token string">"-o-border-image-outset"</span>,
+        <span class="token string">"border-image-outset"</span>,
+        <span class="token string">"-webkit-border-image-repeat"</span>,
+        <span class="token string">"-moz-border-image-repeat"</span>,
+        <span class="token string">"-o-border-image-repeat"</span>,
+        <span class="token string">"border-image-repeat"</span>,
+        <span class="token string">"padding"</span>,
+        <span class="token string">"padding-top"</span>,
+        <span class="token string">"padding-right"</span>,
+        <span class="token string">"padding-bottom"</span>,
+        <span class="token string">"padding-left"</span>,
+        <span class="token string">"width"</span>,
+        <span class="token string">"min-width"</span>,
+        <span class="token string">"max-width"</span>,
+        <span class="token string">"height"</span>,
+        <span class="token string">"min-height"</span>,
+        <span class="token string">"max-height"</span>
+    ],
+    [
+        <span class="token string">"font"</span>,
+        <span class="token string">"font-family"</span>,
+        <span class="token string">"font-size"</span>,
+        <span class="token string">"font-weight"</span>,
+        <span class="token string">"font-style"</span>,
+        <span class="token string">"font-variant"</span>,
+        <span class="token string">"font-size-adjust"</span>,
+        <span class="token string">"font-stretch"</span>,
+        <span class="token string">"font-effect"</span>,
+        <span class="token string">"font-emphasize"</span>,
+        <span class="token string">"font-emphasize-position"</span>,
+        <span class="token string">"font-emphasize-style"</span>,
+        <span class="token string">"font-smooth"</span>,
+        <span class="token string">"line-height"</span>,
+        <span class="token string">"text-align"</span>,
+        <span class="token string">"-webkit-text-align-last"</span>,
+        <span class="token string">"-moz-text-align-last"</span>,
+        <span class="token string">"-ms-text-align-last"</span>,
+        <span class="token string">"text-align-last"</span>,
+        <span class="token string">"vertical-align"</span>,
+        <span class="token string">"white-space"</span>,
+        <span class="token string">"text-decoration"</span>,
+        <span class="token string">"text-emphasis"</span>,
+        <span class="token string">"text-emphasis-color"</span>,
+        <span class="token string">"text-emphasis-style"</span>,
+        <span class="token string">"text-emphasis-position"</span>,
+        <span class="token string">"text-indent"</span>,
+        <span class="token string">"-ms-text-justify"</span>,
+        <span class="token string">"text-justify"</span>,
+        <span class="token string">"letter-spacing"</span>,
+        <span class="token string">"word-spacing"</span>,
+        <span class="token string">"-ms-writing-mode"</span>,
+        <span class="token string">"text-outline"</span>,
+        <span class="token string">"text-transform"</span>,
+        <span class="token string">"text-wrap"</span>,
+        <span class="token string">"-ms-text-overflow"</span>,
+        <span class="token string">"text-overflow"</span>,
+        <span class="token string">"text-overflow-ellipsis"</span>,
+        <span class="token string">"text-overflow-mode"</span>,
+        <span class="token string">"-ms-word-wrap"</span>,
+        <span class="token string">"word-wrap"</span>,
+        <span class="token string">"-ms-word-break"</span>,
+        <span class="token string">"word-break"</span>
+    ],
+    [
+        <span class="token string">"color"</span>,
+        <span class="token string">"background"</span>,
+        <span class="token string">"filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"</span>,
+        <span class="token string">"background-color"</span>,
+        <span class="token string">"background-image"</span>,
+        <span class="token string">"background-repeat"</span>,
+        <span class="token string">"background-attachment"</span>,
+        <span class="token string">"background-position"</span>,
+        <span class="token string">"-ms-background-position-x"</span>,
+        <span class="token string">"background-position-x"</span>,
+        <span class="token string">"-ms-background-position-y"</span>,
+        <span class="token string">"background-position-y"</span>,
+        <span class="token string">"-webkit-background-clip"</span>,
+        <span class="token string">"-moz-background-clip"</span>,
+        <span class="token string">"background-clip"</span>,
+        <span class="token string">"background-origin"</span>,
+        <span class="token string">"-webkit-background-size"</span>,
+        <span class="token string">"-moz-background-size"</span>,
+        <span class="token string">"-o-background-size"</span>,
+        <span class="token string">"background-size"</span>
+    ],
+    [
+        <span class="token string">"outline"</span>,
+        <span class="token string">"outline-width"</span>,
+        <span class="token string">"outline-style"</span>,
+        <span class="token string">"outline-color"</span>,
+        <span class="token string">"outline-offset"</span>,
+        <span class="token string">"opacity"</span>,
+        <span class="token string">"filter:progid:DXImageTransform.Microsoft.Alpha(Opacity"</span>,
+        <span class="token string">"-ms-filter:\\'progid:DXImageTransform.Microsoft.Alpha"</span>,
+        <span class="token string">"-ms-interpolation-mode"</span>,
+        <span class="token string">"-webkit-box-shadow"</span>,
+        <span class="token string">"-moz-box-shadow"</span>,
+        <span class="token string">"box-shadow"</span>,
+        <span class="token string">"filter:progid:DXImageTransform.Microsoft.gradient"</span>,
+        <span class="token string">"-ms-filter:\\'progid:DXImageTransform.Microsoft.gradient"</span>,
+        <span class="token string">"text-shadow"</span>
+    ],
+    [
+        <span class="token string">"-webkit-transition"</span>,
+        <span class="token string">"-moz-transition"</span>,
+        <span class="token string">"-ms-transition"</span>,
+        <span class="token string">"-o-transition"</span>,
+        <span class="token string">"transition"</span>,
+        <span class="token string">"-webkit-transition-delay"</span>,
+        <span class="token string">"-moz-transition-delay"</span>,
+        <span class="token string">"-ms-transition-delay"</span>,
+        <span class="token string">"-o-transition-delay"</span>,
+        <span class="token string">"transition-delay"</span>,
+        <span class="token string">"-webkit-transition-timing-function"</span>,
+        <span class="token string">"-moz-transition-timing-function"</span>,
+        <span class="token string">"-ms-transition-timing-function"</span>,
+        <span class="token string">"-o-transition-timing-function"</span>,
+        <span class="token string">"transition-timing-function"</span>,
+        <span class="token string">"-webkit-transition-duration"</span>,
+        <span class="token string">"-moz-transition-duration"</span>,
+        <span class="token string">"-ms-transition-duration"</span>,
+        <span class="token string">"-o-transition-duration"</span>,
+        <span class="token string">"transition-duration"</span>,
+        <span class="token string">"-webkit-transition-property"</span>,
+        <span class="token string">"-moz-transition-property"</span>,
+        <span class="token string">"-ms-transition-property"</span>,
+        <span class="token string">"-o-transition-property"</span>,
+        <span class="token string">"transition-property"</span>,
+        <span class="token string">"-webkit-transform"</span>,
+        <span class="token string">"-moz-transform"</span>,
+        <span class="token string">"-ms-transform"</span>,
+        <span class="token string">"-o-transform"</span>,
+        <span class="token string">"transform"</span>,
+        <span class="token string">"-webkit-transform-origin"</span>,
+        <span class="token string">"-moz-transform-origin"</span>,
+        <span class="token string">"-ms-transform-origin"</span>,
+        <span class="token string">"-o-transform-origin"</span>,
+        <span class="token string">"transform-origin"</span>,
+        <span class="token string">"-webkit-animation"</span>,
+        <span class="token string">"-moz-animation"</span>,
+        <span class="token string">"-ms-animation"</span>,
+        <span class="token string">"-o-animation"</span>,
+        <span class="token string">"animation"</span>,
+        <span class="token string">"-webkit-animation-name"</span>,
+        <span class="token string">"-moz-animation-name"</span>,
+        <span class="token string">"-ms-animation-name"</span>,
+        <span class="token string">"-o-animation-name"</span>,
+        <span class="token string">"animation-name"</span>,
+        <span class="token string">"-webkit-animation-duration"</span>,
+        <span class="token string">"-moz-animation-duration"</span>,
+        <span class="token string">"-ms-animation-duration"</span>,
+        <span class="token string">"-o-animation-duration"</span>,
+        <span class="token string">"animation-duration"</span>,
+        <span class="token string">"-webkit-animation-play-state"</span>,
+        <span class="token string">"-moz-animation-play-state"</span>,
+        <span class="token string">"-ms-animation-play-state"</span>,
+        <span class="token string">"-o-animation-play-state"</span>,
+        <span class="token string">"animation-play-state"</span>,
+        <span class="token string">"-webkit-animation-timing-function"</span>,
+        <span class="token string">"-moz-animation-timing-function"</span>,
+        <span class="token string">"-ms-animation-timing-function"</span>,
+        <span class="token string">"-o-animation-timing-function"</span>,
+        <span class="token string">"animation-timing-function"</span>,
+        <span class="token string">"-webkit-animation-delay"</span>,
+        <span class="token string">"-moz-animation-delay"</span>,
+        <span class="token string">"-ms-animation-delay"</span>,
+        <span class="token string">"-o-animation-delay"</span>,
+        <span class="token string">"animation-delay"</span>,
+        <span class="token string">"-webkit-animation-iteration-count"</span>,
+        <span class="token string">"-moz-animation-iteration-count"</span>,
+        <span class="token string">"-ms-animation-iteration-count"</span>,
+        <span class="token string">"-o-animation-iteration-count"</span>,
+        <span class="token string">"animation-iteration-count"</span>,
+        <span class="token string">"-webkit-animation-direction"</span>,
+        <span class="token string">"-moz-animation-direction"</span>,
+        <span class="token string">"-ms-animation-direction"</span>,
+        <span class="token string">"-o-animation-direction"</span>,
+        <span class="token string">"animation-direction"</span>
+    ],
+    [
+        <span class="token string">"content"</span>,
+        <span class="token string">"quotes"</span>,
+        <span class="token string">"counter-reset"</span>,
+        <span class="token string">"counter-increment"</span>,
+        <span class="token string">"resize"</span>,
+        <span class="token string">"cursor"</span>,
+        <span class="token string">"-webkit-user-select"</span>,
+        <span class="token string">"-moz-user-select"</span>,
+        <span class="token string">"-ms-user-select"</span>,
+        <span class="token string">"user-select"</span>,
+        <span class="token string">"nav-index"</span>,
+        <span class="token string">"nav-up"</span>,
+        <span class="token string">"nav-right"</span>,
+        <span class="token string">"nav-down"</span>,
+        <span class="token string">"nav-left"</span>,
+        <span class="token string">"-moz-tab-size"</span>,
+        <span class="token string">"-o-tab-size"</span>,
+        <span class="token string">"tab-size"</span>,
+        <span class="token string">"-webkit-hyphens"</span>,
+        <span class="token string">"-moz-hyphens"</span>,
+        <span class="token string">"hyphens"</span>,
+        <span class="token string">"pointer-events"</span>
+    ]
+]
+</code></pre>
+<h1 id="10、颜色"><a href="#10、颜色" class="headerlink" title="10、颜色"></a>10、颜色</h1><p>颜色16进制用小写字母；</p>
+<p>颜色16进制尽量用简写。</p>
+<pre class=" highlight language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#ABCDEF</span><span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#001122</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#abcdef</span><span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#012</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="11、属性不建议简写"><a href="#11、属性不建议简写" class="headerlink" title="11、属性不建议简写"></a>11、属性不建议简写</h1><p>属性简写需要你非常清楚属性值的正确顺序，而且在大多数情况下并不需要设置属性简写中包含的所有值，所以建议尽量分开声明会更加清晰；</p>
+<p><code>margin</code> 和 <code>padding</code> 相反，需要使用简写；</p>
+<p>常见的属性简写包括：</p>
 <ul>
-<li>Modal header<br>*/<br>.modal-header {<br> …<br>}</li>
+<li><code>font</code></li>
+<li><code>background</code></li>
+<li><code>transition</code></li>
+<li><code>animation</code></li>
 </ul>
-<p>.modal-header {<br>    /<em> 50px </em>/<br>    width: 50px;</p>
-<pre><code>color: red; /* color red */
-</code></pre><p>}</p>
-<pre><code>
-#### 7、引号
-最外层统一使用双引号；
+<pre class=" highlight language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> opacity <span class="token number">1</span>s linear <span class="token number">2</span>s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-url的内容要使用引号；
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">transition-delay</span><span class="token punctuation">:</span> <span class="token number">2</span>s<span class="token punctuation">;</span>
+    <span class="token property">transition-timing-function</span><span class="token punctuation">:</span> linear<span class="token punctuation">;</span>
+    <span class="token property">transition-duration</span><span class="token punctuation">:</span> <span class="token number">1</span>s<span class="token punctuation">;</span>
+    <span class="token property">transition-property</span><span class="token punctuation">:</span> opacity<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="12、媒体查询"><a href="#12、媒体查询" class="headerlink" title="12、媒体查询"></a>12、媒体查询</h1><p>尽量将媒体查询的规则靠近与他们相关的规则，不要将他们一起放到一个独立的样式文件中，或者丢在文档的最底部，这样做只会让大家以后更容易忘记他们。</p>
+<pre class=" highlight language-css"><code class="language-css"><span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
 
-属性选择器中的属性值需要引导；
-</code></pre><p>.element:after {<br>    content: “”;<br>    background-image: url(“logo.png”);<br>}</p>
-<p>li[data-type=”single”] {<br>    …<br>}</p>
-<pre><code>
-#### 8、命名
- - 类名使用小写字母，以中划线分隔；
- - id采用驼峰式命名；
- - scss中的变量、函数、混合、placeholder采用驼峰式命名
-</code></pre><p>/<em> class </em>/<br>.element-content {<br>    …<br>}</p>
-<p>/<em> id </em>/</p>
-<p>#myDialog {<br>    …<br>}</p>
-<p>/<em> 变量 </em>/<br>$colorBlack: #000;</p>
-<p>/<em> 函数 </em>/<br>@function pxToRem($px) {<br>    …<br>}</p>
-<p>/<em> 混合 </em>/<br>@mixin centerBlock {<br>    …<br>}</p>
-<p>/<em> placeholder </em>/<br>%myDialog {<br>    …<br>}</p>
-<pre><code>
-#### 9、属性声明顺序
-相关的属性声明按下面的顺序做分组处理，组之间需要有一个空行。
-</code></pre><p>.declaration-order {<br>    display: block;<br>    float: right;</p>
-<pre><code>position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-z-index: 100;
+<span class="token selector"><span class="token class">.element-avatar</span></span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
 
-border: 1px solid #e5e5e5;
-border-radius: 3px;
-width: 100px;
-height: 100px;
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 480px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+        <span class="token number">...</span>
+    <span class="token punctuation">}</span>
 
-font: normal 13px &quot;Helvetica Neue&quot;, sans-serif;
-line-height: 1.5;
-text-align: center;
+    <span class="token selector"><span class="token class">.element-avatar</span> </span><span class="token punctuation">{</span>
+        <span class="token number">...</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="13、SCSS相关"><a href="#13、SCSS相关" class="headerlink" title="13、SCSS相关"></a>13、SCSS相关</h1><p>提交的代码中不要有 <code>@debug</code>；</p>
+<p>声明顺序：</p>
+<ul>
+<li><code>@extend</code></li>
+<li>不包含 <code>@content</code> 的 <code>@include</code></li>
+<li>包含 <code>@content</code> 的 <code>@include</code></li>
+<li>自身属性</li>
+<li>嵌套规则</li>
+</ul>
+<p><code>@import</code> 引入的文件不需要开头的<code>_</code>和结尾的<code>.scss</code>；</p>
+<p>嵌套最多不能超过5层；</p>
+<p><code>@extend</code> 中使用placeholder选择器；</p>
+<p>去掉不必要的父级引用符号<code>&amp;</code>。</p>
+<pre class=" highlight language-scss"><code class="language-scss"><span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token keyword">@import</span> <span class="token string">"_dialog.scss"</span><span class="token punctuation">;</span>
 
-color: #333;
-background-color: #f5f5f5;
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token keyword">@import</span> <span class="token string">"dialog"</span><span class="token punctuation">;</span>
 
-opacity: 1;
-</code></pre><p>}</p>
-<p>// 下面是推荐的属性的顺序<br>[<br>    [<br>        “display”,<br>        “visibility”,<br>        “float”,<br>        “clear”,<br>        “overflow”,<br>        “overflow-x”,<br>        “overflow-y”,<br>        “clip”,<br>        “zoom”<br>    ],<br>    [<br>        “table-layout”,<br>        “empty-cells”,<br>        “caption-side”,<br>        “border-spacing”,<br>        “border-collapse”,<br>        “list-style”,<br>        “list-style-position”,<br>        “list-style-type”,<br>        “list-style-image”<br>    ],<br>    [<br>        “-webkit-box-orient”,<br>        “-webkit-box-direction”,<br>        “-webkit-box-decoration-break”,<br>        “-webkit-box-pack”,<br>        “-webkit-box-align”,<br>        “-webkit-box-flex”<br>    ],<br>    [<br>        “position”,<br>        “top”,<br>        “right”,<br>        “bottom”,<br>        “left”,<br>        “z-index”<br>    ],<br>    [<br>        “margin”,<br>        “margin-top”,<br>        “margin-right”,<br>        “margin-bottom”,<br>        “margin-left”,<br>        “-webkit-box-sizing”,<br>        “-moz-box-sizing”,<br>        “box-sizing”,<br>        “border”,<br>        “border-width”,<br>        “border-style”,<br>        “border-color”,<br>        “border-top”,<br>        “border-top-width”,<br>        “border-top-style”,<br>        “border-top-color”,<br>        “border-right”,<br>        “border-right-width”,<br>        “border-right-style”,<br>        “border-right-color”,<br>        “border-bottom”,<br>        “border-bottom-width”,<br>        “border-bottom-style”,<br>        “border-bottom-color”,<br>        “border-left”,<br>        “border-left-width”,<br>        “border-left-style”,<br>        “border-left-color”,<br>        “-webkit-border-radius”,<br>        “-moz-border-radius”,<br>        “border-radius”,<br>        “-webkit-border-top-left-radius”,<br>        “-moz-border-radius-topleft”,<br>        “border-top-left-radius”,<br>        “-webkit-border-top-right-radius”,<br>        “-moz-border-radius-topright”,<br>        “border-top-right-radius”,<br>        “-webkit-border-bottom-right-radius”,<br>        “-moz-border-radius-bottomright”,<br>        “border-bottom-right-radius”,<br>        “-webkit-border-bottom-left-radius”,<br>        “-moz-border-radius-bottomleft”,<br>        “border-bottom-left-radius”,<br>        “-webkit-border-image”,<br>        “-moz-border-image”,<br>        “-o-border-image”,<br>        “border-image”,<br>        “-webkit-border-image-source”,<br>        “-moz-border-image-source”,<br>        “-o-border-image-source”,<br>        “border-image-source”,<br>        “-webkit-border-image-slice”,<br>        “-moz-border-image-slice”,<br>        “-o-border-image-slice”,<br>        “border-image-slice”,<br>        “-webkit-border-image-width”,<br>        “-moz-border-image-width”,<br>        “-o-border-image-width”,<br>        “border-image-width”,<br>        “-webkit-border-image-outset”,<br>        “-moz-border-image-outset”,<br>        “-o-border-image-outset”,<br>        “border-image-outset”,<br>        “-webkit-border-image-repeat”,<br>        “-moz-border-image-repeat”,<br>        “-o-border-image-repeat”,<br>        “border-image-repeat”,<br>        “padding”,<br>        “padding-top”,<br>        “padding-right”,<br>        “padding-bottom”,<br>        “padding-left”,<br>        “width”,<br>        “min-width”,<br>        “max-width”,<br>        “height”,<br>        “min-height”,<br>        “max-height”<br>    ],<br>    [<br>        “font”,<br>        “font-family”,<br>        “font-size”,<br>        “font-weight”,<br>        “font-style”,<br>        “font-variant”,<br>        “font-size-adjust”,<br>        “font-stretch”,<br>        “font-effect”,<br>        “font-emphasize”,<br>        “font-emphasize-position”,<br>        “font-emphasize-style”,<br>        “font-smooth”,<br>        “line-height”,<br>        “text-align”,<br>        “-webkit-text-align-last”,<br>        “-moz-text-align-last”,<br>        “-ms-text-align-last”,<br>        “text-align-last”,<br>        “vertical-align”,<br>        “white-space”,<br>        “text-decoration”,<br>        “text-emphasis”,<br>        “text-emphasis-color”,<br>        “text-emphasis-style”,<br>        “text-emphasis-position”,<br>        “text-indent”,<br>        “-ms-text-justify”,<br>        “text-justify”,<br>        “letter-spacing”,<br>        “word-spacing”,<br>        “-ms-writing-mode”,<br>        “text-outline”,<br>        “text-transform”,<br>        “text-wrap”,<br>        “-ms-text-overflow”,<br>        “text-overflow”,<br>        “text-overflow-ellipsis”,<br>        “text-overflow-mode”,<br>        “-ms-word-wrap”,<br>        “word-wrap”,<br>        “-ms-word-break”,<br>        “word-break”<br>    ],<br>    [<br>        “color”,<br>        “background”,<br>        “filter:progid:DXImageTransform.Microsoft.AlphaImageLoader”,<br>        “background-color”,<br>        “background-image”,<br>        “background-repeat”,<br>        “background-attachment”,<br>        “background-position”,<br>        “-ms-background-position-x”,<br>        “background-position-x”,<br>        “-ms-background-position-y”,<br>        “background-position-y”,<br>        “-webkit-background-clip”,<br>        “-moz-background-clip”,<br>        “background-clip”,<br>        “background-origin”,<br>        “-webkit-background-size”,<br>        “-moz-background-size”,<br>        “-o-background-size”,<br>        “background-size”<br>    ],<br>    [<br>        “outline”,<br>        “outline-width”,<br>        “outline-style”,<br>        “outline-color”,<br>        “outline-offset”,<br>        “opacity”,<br>        “filter:progid:DXImageTransform.Microsoft.Alpha(Opacity”,<br>        “-ms-filter:\‘progid:DXImageTransform.Microsoft.Alpha”,<br>        “-ms-interpolation-mode”,<br>        “-webkit-box-shadow”,<br>        “-moz-box-shadow”,<br>        “box-shadow”,<br>        “filter:progid:DXImageTransform.Microsoft.gradient”,<br>        “-ms-filter:\‘progid:DXImageTransform.Microsoft.gradient”,<br>        “text-shadow”<br>    ],<br>    [<br>        “-webkit-transition”,<br>        “-moz-transition”,<br>        “-ms-transition”,<br>        “-o-transition”,<br>        “transition”,<br>        “-webkit-transition-delay”,<br>        “-moz-transition-delay”,<br>        “-ms-transition-delay”,<br>        “-o-transition-delay”,<br>        “transition-delay”,<br>        “-webkit-transition-timing-function”,<br>        “-moz-transition-timing-function”,<br>        “-ms-transition-timing-function”,<br>        “-o-transition-timing-function”,<br>        “transition-timing-function”,<br>        “-webkit-transition-duration”,<br>        “-moz-transition-duration”,<br>        “-ms-transition-duration”,<br>        “-o-transition-duration”,<br>        “transition-duration”,<br>        “-webkit-transition-property”,<br>        “-moz-transition-property”,<br>        “-ms-transition-property”,<br>        “-o-transition-property”,<br>        “transition-property”,<br>        “-webkit-transform”,<br>        “-moz-transform”,<br>        “-ms-transform”,<br>        “-o-transform”,<br>        “transform”,<br>        “-webkit-transform-origin”,<br>        “-moz-transform-origin”,<br>        “-ms-transform-origin”,<br>        “-o-transform-origin”,<br>        “transform-origin”,<br>        “-webkit-animation”,<br>        “-moz-animation”,<br>        “-ms-animation”,<br>        “-o-animation”,<br>        “animation”,<br>        “-webkit-animation-name”,<br>        “-moz-animation-name”,<br>        “-ms-animation-name”,<br>        “-o-animation-name”,<br>        “animation-name”,<br>        “-webkit-animation-duration”,<br>        “-moz-animation-duration”,<br>        “-ms-animation-duration”,<br>        “-o-animation-duration”,<br>        “animation-duration”,<br>        “-webkit-animation-play-state”,<br>        “-moz-animation-play-state”,<br>        “-ms-animation-play-state”,<br>        “-o-animation-play-state”,<br>        “animation-play-state”,<br>        “-webkit-animation-timing-function”,<br>        “-moz-animation-timing-function”,<br>        “-ms-animation-timing-function”,<br>        “-o-animation-timing-function”,<br>        “animation-timing-function”,<br>        “-webkit-animation-delay”,<br>        “-moz-animation-delay”,<br>        “-ms-animation-delay”,<br>        “-o-animation-delay”,<br>        “animation-delay”,<br>        “-webkit-animation-iteration-count”,<br>        “-moz-animation-iteration-count”,<br>        “-ms-animation-iteration-count”,<br>        “-o-animation-iteration-count”,<br>        “animation-iteration-count”,<br>        “-webkit-animation-direction”,<br>        “-moz-animation-direction”,<br>        “-ms-animation-direction”,<br>        “-o-animation-direction”,<br>        “animation-direction”<br>    ],<br>    [<br>        “content”,<br>        “quotes”,<br>        “counter-reset”,<br>        “counter-increment”,<br>        “resize”,<br>        “cursor”,<br>        “-webkit-user-select”,<br>        “-moz-user-select”,<br>        “-ms-user-select”,<br>        “user-select”,<br>        “nav-index”,<br>        “nav-up”,<br>        “nav-right”,<br>        “nav-down”,<br>        “nav-left”,<br>        “-moz-tab-size”,<br>        “-o-tab-size”,<br>        “tab-size”,<br>        “-webkit-hyphens”,<br>        “-moz-hyphens”,<br>        “hyphens”,<br>        “pointer-events”<br>    ]<br>]</p>
-<pre><code>
-#### 10、颜色
-颜色16进制用小写字母；
+<span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector">.fatal </span><span class="token punctuation">{</span>
+    <span class="token keyword">@extend</span> <span class="token number">.</span>error<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-颜色16进制尽量用简写。
-</code></pre><p>/<em> not good </em>/<br>.element {<br>    color: #ABCDEF;<br>    background-color: #001122;<br>}</p>
-<p>/<em> good </em>/<br>.element {<br>    color: #abcdef;<br>    background-color: #012;<br>}</p>
-<pre><code>
-#### 11、属性简写
-属性简写需要你非常清楚属性值的正确顺序，而且在大多数情况下并不需要设置属性简写中包含的所有值，所以建议尽量分开声明会更加清晰；
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector">.fatal </span><span class="token punctuation">{</span>
+    <span class="token keyword">@extend</span> <span class="token number">%</span>error<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-`margin` 和 `padding` 相反，需要使用简写；
+<span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector">.element </span><span class="token punctuation">{</span>
+    <span class="token selector"><span class="token parent important">&amp;</span> > .dialog </span><span class="token punctuation">{</span>
+        <span class="token number">...</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-常见的属性简写包括：
- - `font`
- - `background`
- - `transition`
- - `animation`
-</code></pre><p>/<em> not good </em>/<br>.element {<br>    transition: opacity 1s linear 2s;<br>}</p>
-<p>/<em> good </em>/<br>.element {<br>    transition-delay: 2s;<br>    transition-timing-function: linear;<br>    transition-duration: 1s;<br>    transition-property: opacity;<br>}</p>
-<pre><code>
-#### 12、媒体查询
-尽量将媒体查询的规则靠近与他们相关的规则，不要将他们一起放到一个独立的样式文件中，或者丢在文档的最底部，这样做只会让大家以后更容易忘记他们。
-</code></pre><p>.element {<br>    …<br>}</p>
-<p>.element-avatar{<br>    …<br>}</p>
-<p>@media (min-width: 480px) {<br>    .element {<br>        …<br>    }</p>
-<pre><code>.element-avatar {
-    ...
-}
-</code></pre><p>}</p>
-<pre><code>#### 13、SCSS相关
-提交的代码中不要有 `@debug`；
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector">.element </span><span class="token punctuation">{</span>
+    <span class="token selector">> .dialog </span><span class="token punctuation">{</span>
+        <span class="token number">...</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="14、杂项"><a href="#14、杂项" class="headerlink" title="14、杂项"></a>14、杂项</h1><ul>
+<li>不允许有空的规则；</li>
+<li>元素选择器用小写字母；</li>
+<li>去掉小数点前面的0；</li>
+<li>去掉数字中不必要的小数点和末尾的0；</li>
+<li>属性值’0’后面不要加单位；</li>
+<li>同个属性不同前缀的写法需要在垂直方向保持对齐，具体参照右边的写法；</li>
+<li>无前缀的标准属性应该写在有前缀的属性后面；</li>
+<li>不要在同个规则里出现重复的属性，如果重复的属性是连续的则没关系；</li>
+<li>不要在一个文件里出现两个相同的规则；</li>
+<li>用 <code>border: 0;</code> 代替 <code>border: none;</code>；</li>
+<li>选择器不要超过4层（在scss中如果超过4层应该考虑用嵌套的方式来写）；</li>
+<li>发布的代码中不要有 <code>@import</code>；</li>
+<li>尽量少用’*’选择器。</li>
+</ul>
+<pre class=" highlight language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
 
-声明顺序：
- - `@extend`
- - 不包含 `@content` 的 `@include`
- - 包含 `@content` 的 `@include`
- - 自身属性
- - 嵌套规则
+<span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector">LI </span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
 
-`@import` 引入的文件不需要开头的`_`和结尾的`.scss`；
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector">li </span><span class="token punctuation">{</span>
+    <span class="token number">...</span>
+<span class="token punctuation">}</span>
 
-嵌套最多不能超过5层；
+<span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-`@extend` 中使用placeholder选择器；
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-去掉不必要的父级引用符号`&amp;`。
-</code></pre><p>/<em> not good </em>/<br>@import “_dialog.scss”;</p>
-<p>/<em> good </em>/<br>@import “dialog”;</p>
-<p>/<em> not good </em>/<br>.fatal {<br>    @extend .error;<br>}</p>
-<p>/<em> good </em>/<br>.fatal {<br>    @extend %error;<br>}</p>
-<p>/<em> not good </em>/<br>.element {<br>    &amp; &gt; .dialog {<br>        …<br>    }<br>}</p>
-<p>/<em> good </em>/<br>.element {<br>    &gt; .dialog {<br>        …<br>    }<br>}</p>
-<pre><code>
-#### 14、杂项
- - 不允许有空的规则；
- - 元素选择器用小写字母；
- - 去掉小数点前面的0；
- - 去掉数字中不必要的小数点和末尾的0；
- - 属性值&#39;0&#39;后面不要加单位；
- - 同个属性不同前缀的写法需要在垂直方向保持对齐，具体参照右边的写法；
- - 无前缀的标准属性应该写在有前缀的属性后面；
- - 不要在同个规则里出现重复的属性，如果重复的属性是连续的则没关系；
- - 不要在一个文件里出现两个相同的规则；
- - 用 `border: 0;` 代替 `border: none;`；
- - 选择器不要超过4层（在scss中如果超过4层应该考虑用嵌套的方式来写）；
- - 发布的代码中不要有 `@import`；
- - 尽量少用&#39;*&#39;选择器。
-</code></pre><p>/<em> not good </em>/<br>.element {<br>}</p>
-<p>/<em> not good </em>/<br>LI {<br>    …<br>}</p>
-<p>/<em> good </em>/<br>li {<br>    …<br>}</p>
-<p>/<em> not good </em>/<br>.element {<br>    color: rgba(0, 0, 0, 0.5);<br>}</p>
-<p>/<em> good </em>/<br>.element {<br>    color: rgba(0, 0, 0, .5);<br>}</p>
-<p>/<em> not good </em>/<br>.element {<br>    width: 50.0px;<br>}</p>
-<p>/<em> good </em>/<br>.element {<br>    width: 50px;<br>}</p>
-<p>/<em> not good </em>/<br>.element {<br>    width: 0px;<br>}</p>
-<p>/<em> good </em>/<br>.element {<br>    width: 0;<br>}</p>
-<p>/<em> not good </em>/<br>.element {<br>    border-radius: 3px;<br>    -webkit-border-radius: 3px;<br>    -moz-border-radius: 3px;</p>
-<pre><code>background: linear-gradient(to bottom, #fff 0, #eee 100%);
-background: -webkit-linear-gradient(top, #fff 0, #eee 100%);
-background: -moz-linear-gradient(top, #fff 0, #eee 100%);
-</code></pre><p>}</p>
-<p>/<em> good </em>/<br>.element {<br>    -webkit-border-radius: 3px;<br>       -moz-border-radius: 3px;<br>            border-radius: 3px;</p>
-<pre><code>background: -webkit-linear-gradient(top, #fff 0, #eee 100%);
-background:    -moz-linear-gradient(top, #fff 0, #eee 100%);
-background:         linear-gradient(to bottom, #fff 0, #eee 100%);
-</code></pre><p>}</p>
-<p>/<em> not good </em>/<br>.element {<br>    color: rgb(0, 0, 0);<br>    width: 50px;<br>    color: rgba(0, 0, 0, .5);<br>}</p>
-<p>/<em> good </em>/<br>.element {<br>    color: rgb(0, 0, 0);<br>    color: rgba(0, 0, 0, .5);<br>}<br><code>`</code></p>
+<span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">50.0</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">3</span>px<span class="token punctuation">;</span>
+    <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> <span class="token number">3</span>px<span class="token punctuation">;</span>
+    <span class="token property">-moz-border-radius</span><span class="token punctuation">:</span> <span class="token number">3</span>px<span class="token punctuation">;</span>
+
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to bottom, <span class="token hexcode">#fff</span> <span class="token number">0</span>, <span class="token hexcode">#eee</span> <span class="token number">100%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">-webkit-linear-gradient</span><span class="token punctuation">(</span>top, <span class="token hexcode">#fff</span> <span class="token number">0</span>, <span class="token hexcode">#eee</span> <span class="token number">100%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">-moz-linear-gradient</span><span class="token punctuation">(</span>top, <span class="token hexcode">#fff</span> <span class="token number">0</span>, <span class="token hexcode">#eee</span> <span class="token number">100%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> <span class="token number">3</span>px<span class="token punctuation">;</span>
+       <span class="token property">-moz-border-radius</span><span class="token punctuation">:</span> <span class="token number">3</span>px<span class="token punctuation">;</span>
+            <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">3</span>px<span class="token punctuation">;</span>
+
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">-webkit-linear-gradient</span><span class="token punctuation">(</span>top, <span class="token hexcode">#fff</span> <span class="token number">0</span>, <span class="token hexcode">#eee</span> <span class="token number">100%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span>    <span class="token function">-moz-linear-gradient</span><span class="token punctuation">(</span>top, <span class="token hexcode">#fff</span> <span class="token number">0</span>, <span class="token hexcode">#eee</span> <span class="token number">100%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span>         <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to bottom, <span class="token hexcode">#fff</span> <span class="token number">0</span>, <span class="token hexcode">#eee</span> <span class="token number">100%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* not good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* good */</span>
+<span class="token selector"><span class="token class">.element</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <hr>
 <p><strong>相关资料：</strong></p>
 <ul>
@@ -426,7 +953,7 @@ background:         linear-gradient(to bottom, #fff 0, #eee 100%);
                 <div id="post-toc">
                     
                         <p class="h4 text-bold">目录</p>
-                        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1、缩进"><span class="post-toc-text">1、缩进</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2、分号"><span class="post-toc-text">2、分号</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3、空格"><span class="post-toc-text">3、空格</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4、空行"><span class="post-toc-text">4、空行</span></a></li></ol>
+                        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1、缩进"><span class="post-toc-text">1、缩进</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2、分号"><span class="post-toc-text">2、分号</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#3、空格"><span class="post-toc-text">3、空格</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#4、空行"><span class="post-toc-text">4、空行</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#5、换行"><span class="post-toc-text">5、换行</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#6、注释"><span class="post-toc-text">6、注释</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#7、引号"><span class="post-toc-text">7、引号</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#8、命名"><span class="post-toc-text">8、命名</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#9、属性声明顺序"><span class="post-toc-text">9、属性声明顺序</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#10、颜色"><span class="post-toc-text">10、颜色</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#11、属性不建议简写"><span class="post-toc-text">11、属性不建议简写</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#12、媒体查询"><span class="post-toc-text">12、媒体查询</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#13、SCSS相关"><span class="post-toc-text">13、SCSS相关</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#14、杂项"><span class="post-toc-text">14、杂项</span></a></li></ol>
                     
                 </div>
             </div>

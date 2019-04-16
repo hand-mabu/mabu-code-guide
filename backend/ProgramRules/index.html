@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <title>编程规约 | MabuDoc Theme</title>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <meta name="description" content="Modern, powerful and simple theme for Hexo.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@0.1.0/source/img/suka-favicon.ico">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@0.1.0/source/img/suka-favicon.ico">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.3/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.3/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectre.css@0.5.3/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="/mabu-code-guide/style.min.css">
+    <link rel="stylesheet" href="/mabu-code-guide/markdown.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sukkaw/hexo-theme-suka@0.1.0/source/lib/prism/prism-ghcolors.min.css">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hand-mabu.github.io/hexo-mabu-doc/">
+    <meta property="og:title" content="介绍 | MabuDoc Theme">
+    <meta property="og:description" content="Modern Simlpe Powerful Theme for hexo">
+    <meta property="og:image" content>
+</head>
+
+<body>
+    
+<header class="pt-2 pb-2">
+    <div class="container grid-lg navbar pt-2 pb-2">
+        <section class="navbar-section">
+            <a class="off-canvas-toggle btn btn-link btn-action" href="#sidebar"><i class="icon icon-menu"></i></a>
+            <a class="navbar-icon" href="https://hand-mabu.github.io/hexo-mabu-doc/">
+                <img src="/mabu-code-guide/assets/img/hexo-theme-suka.png">
+            </a>
+            <a href="https://hand-mabu.github.io/hexo-mabu-doc/" class="btn btn-link">
+                MabuDoc Theme</a>
+        </section>
+        <section class="navbar-section">
+            
+            <a href="/mabu-code-guide/backend/ProgramRules/" class="btn btn-link navbar-link">简体中文</a>
+            
+        </section>
+    </div>
+</header>
+
+    <div class="off-canvas off-canvas-sidebar-show">
+
+        <div id="sidebar" class="off-canvas-sidebar">
+            
+
+<div class="docs-nav">
+    <div class="docs-search has-icon-left">
+        <i class="form-icon icon icon-search"></i>
+        <input id="search-field" class="form-input" type="text" placeholder="Search...">
+    </div>
+    <div id="search-result"></div>
+    <ul class="nav">
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/">
+        MABU 代码规范
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="javascript:void(0);">
+        前端
+    </a>
+</li><ul class="nav">
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/frontend/namingRules/">
+        命名规则
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/frontend/HTML/">
+        HTML
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/frontend/CSS_SCSS/">
+        CSS SCSS
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/frontend/JavaScript/">
+        JavaScript
+    </a>
+</li></ul>
+
+<li class="nav-item" style>
+    <a href="javascript:void(0);">
+        后端
+    </a>
+</li><ul class="nav">
+
+<li class="nav-item active" style>
+    <a href="/mabu-code-guide/backend/ProgramRules/">
+        编程规约
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/ExceptionLog/">
+        异常日志
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/UnitTest/">
+        单元测试
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/SafetyRules/">
+        安全规约
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/MysqlDatabase/">
+        MYSQL数据库
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/EngineeringStructure/">
+        工程结构
+    </a>
+</li>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/backend/ProperNoun/">
+        专有名词
+    </a>
+</li></ul>
+
+<li class="nav-item" style>
+    <a href="/mabu-code-guide/gitend/git/">
+        Git
+    </a>
+</li></ul>
+    <!-- <ul class="nav"> -->
+    <!-- 
+        <li class="nav-item">
+            <a href="/mabu-code-guide/en/config/">Theme Config</a>
+        </li>
+    -->
+    <!-- </ul> -->
+</div>
+        </div>
+
+        <a class="off-canvas-overlay" href="#close"></a>
+
+        <div class="off-canvas-content">
+            <div class="container px-0">
+                
+
+
+
+
+<div class="docs-header">
+    <div class="docs-header-wrapper">
+        <div class="title-wrapper">
+            <h1 class="docs-header-title mb-1">编程规约</h1>
+            
+        </div>
+        <!-- <span class="label label-rounded bg-dark mt-2">
+            <a class="docs-github" href="https://github.com/theme-suka/docs/tree/master/source/backend/ProgramRules.md" target="_blank">在 GitHub 上编辑</a>
+        </span> -->
+    </div>
+</div>
+
+<div class="docs-content">
+    <div class="columns">
+        <div class="column col-9 col-lg-12 docs-content-section">
+            <div class="container px-0">
+                <div id="post-content">
+                    <h1 id="一、命名风格"><a href="#一、命名风格" class="headerlink" title="一、命名风格"></a>一、命名风格</h1><p>1.【强制】代码中的命名均不能以下划线或美元符号开始，也不能以下划线或美元符号结束。<br>反例：<code>_name / __name / $Object / name_ / name$ / Object$</code></p>
+<p>2.【强制】代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式。<br>说明：正确的英文拼写和语法可以让阅读者易于理解，避免歧义。注意，即使纯拼音命名方式 也要避免采用。<br>正例：<code>alibaba / taobao / youku / hangzhou</code> 等国际通用的名称，可视同英文。<br>反例：<code>DaZhePromotion [打折] / getPingfenByName() [评分] / int 某变量 = 3</code></p>
+<p>3.【强制】类名使用 UpperCamelCase 风格，必须遵从驼峰形式，但以下情形例外：<code>DO / BO / DTO / VO / AO</code><br>正例：<code>MarcoPolo / UserDO / XmlService / TcpUdpDeal / TaPromotion</code><br>反例：<code>macroPolo / UserDo / XMLService / TCPUDPDeal / TAPromotion</code></p>
+<p>4.【强制】方法名、参数名、成员变量、局部变量都统一使用 lowerCamelCase 风格，必须遵从 驼峰形式。<br>正例：<code>localValue / getHttpMessage() / inputUserId</code></p>
+<p>5.【强制】常量命名全部大写，单词间用下划线隔开，力求语义表达完整清楚，不要嫌名字长。<br>正例：<code>MAX_STOCK_COUNT</code><br>反例：<code>MAX_COUNT</code></p>
+<p>6.【强制】抽象类命名使用 <code>Abstract</code> 或 <code>Base</code> 开头；异常类命名使用 <code>Exception</code> 结尾；测试类 命名以它要测试的类的名称开始，以 <code>Test</code> 结尾。</p>
+<p>7.【强制】中括号是数组类型的一部分，数组定义如下：<code>String[] args;</code><br>反例：使用 <code>String args[]</code>的方式来定义。</p>
+<p>8.【强制】<code>POJO</code> 类中布尔类型的变量，都不要加 <code>is</code>，否则部分框架解析会引起序列化错误。<br>反例：定义为基本数据类型 <code>Boolean isDeleted</code>；的属性，它的方法也是 <code>isDeleted()</code>，RPC框架在反向解析的时候，“以为”对应的属性名称是 <code>deleted</code>，导致属性获取不到，进而抛出异 常。 </p>
+<p>9.【强制】包名统一使用小写，点分隔符之间有且仅有一个自然语义的英语单词。包名统一使用 单数形式，但是类名如果有复数含义，类名可以使用复数形式。<br>正例： 应用工具类包名为 <code>com.alibaba.open.util</code>、类名为 <code>MessageUtils</code>（此规则参考 <code>spring</code> 的框架结构）。</p>
+<p>10.【强制】杜绝完全不规范的缩写，避免望文不知义。<br>反例：<code>AbstractClass</code>“缩写”命名成 <code>AbsClass</code>；<code>condition</code>“缩写”命名成 <code>condi</code>，此类随 意缩写严重降低了代码的可阅读性。</p>
+<p>11.【推荐】为了达到代码自解释的目标，任何自定义编程元素在命名时，使用尽量完整的单词 组合来表达其意。<br>正例：从远程仓库拉取代码的类命名为 <code>PullCodeFromRemoteRepository</code>。<br>反例：变量 <code>int a;</code> 的随意命名方式。</p>
+<p>12.【推荐】如果模块、接口、类、方法使用了设计模式，在命名时体现出具体模式。 说明：将设计模式体现在名字中，有利于阅读者快速理解架构设计理念。<br>正例：<code>public class OrderFactory;</code><br>     <code>public class LoginProxy; public class ResourceObserver;</code></p>
+<p>13.【推荐】接口类中的方法和属性不要加任何修饰符号（public 也不要加），保持代码的简洁 性，并加上有效的 <code>Javadoc</code> 注释。尽量不要在接口里定义变量，如果一定要定义变量，肯定是 与接口方法相关，并且是整个应用的基础常量。<br>正例：接口方法签名：<code>void f();</code>接口基础常量表示：<code>String COMPANY = &quot;alibaba&quot;;</code><br>反例：接口方法定义：<code>public abstract void f();</code><br>说明：JDK8 中接口允许有默认实现，那么这个 <code>default</code> 方法，是对所有实现类都有价值的默 认实现。</p>
+<p>14.接口和实现类的命名有两套规则：<br>(1)【强制】对于 <code>Service</code> 和 <code>DAO</code> 类，基于 <code>SOA</code> 的理念，暴露出来的服务一定是接口，内部 的实现类用 Impl 的后缀与接口区别。<br>正例：<code>CacheServiceImpl</code> 实现 <code>CacheService</code> 接口。<br>(2)【推荐】 如果是形容能力的接口名称，取对应的形容词做接口名（通常是–able 的形式）。 正例：<code>AbstractTranslator</code> 实现 <code>Translatable</code>。</p>
+<p>15.【参考】枚举类名建议带上 Enum 后缀，枚举成员名称需要全大写，单词间用下划线隔开。<br>说明：枚举其实就是特殊的常量类，且构造方法被默认强制是私有。<br>正例：枚举名字为 <code>ProcessStatusEnum</code> 的成员名称：<code>SUCCESS / UNKOWN_REASON。</code></p>
+<p>16.【参考】各层命名规约： </p>
+<p>(A) <code>Service/DAO</code> 层方法命名规约</p>
+<ul>
+<li>获取单个对象的方法用 <code>get</code> 做前缀。</li>
+<li>获取多个对象的方法用 <code>list</code> 做前缀。</li>
+<li>获取统计值的方法用 <code>count</code> 做前缀。</li>
+<li>插入的方法用 <code>save/insert</code> 做前缀。</li>
+<li>删除的方法用 <code>remove/delete</code> 做前缀。</li>
+<li>修改的方法用 <code>update</code> 做前缀。</li>
+</ul>
+<p>(B) 领域模型命名规约</p>
+<ul>
+<li>数据对象：<code>xxxDO，xxx</code> 即为数据表名。</li>
+<li>数据传输对象：<code>xxxDTO，xxx</code> 为业务领域相关的名称。</li>
+<li>展示对象：<code>xxxVO，xxx</code> 一般为网页名称。</li>
+<li><code>POJO</code> 是 <code>DO/DTO/BO/VO</code> 的统称，禁止命名成 <code>xxxPOJO</code>。</li>
+</ul>
+<h1 id="二、常量定义"><a href="#二、常量定义" class="headerlink" title="二、常量定义"></a>二、常量定义</h1><p>1.【强制】不允许任何魔法值（即未经定义的常量）直接出现在代码中。<br> 反例：<code>String key = &quot;Id#taobao_&quot; + tradeId;  cache.put(key, value);</code></p>
+<p>2.【强制】<code>long</code> 或者 <code>Long</code> 初始赋值时，使用大写的 L，不能是小写的 l，小写容易跟数字 1 混 淆，造成误解。<br>说明：<code>Long a = 2l;</code> 写的是数字的 21，还是 <code>Long</code> 型的 2?</p>
+<p>3.【推荐】不要使用一个常量类维护所有常量，按常量功能进行归类，分开维护。<br>说明：大而全的常量类，非得使用查找功能才能定位到修改的常量，不利于理解和维护。 正例：缓存相关常量放在类 <code>CacheConsts</code> 下；系统配置相关常量放在类 <code>ConfigConsts</code> 下。</p>
+<p>4.【推荐】常量的复用层次有五层：跨应用共享常量、应用内共享常量、子工程内共享常量、包 内共享常量、类内共享常量。</p>
+<ul>
+<li>跨应用共享常量：放置在二方库中，通常是 <code>client.jar</code> 中的 <code>constant</code> 目录下。</li>
+<li>应用内共享常量：放置在一方库中，通常是 <code>modules</code> 中的 <code>constant</code> 目录下。<br>反例：易懂变量也要统一定义成应用内共享常量，两位攻城师在两个类中分别定义了表示 “是”的变量：<br>类 A 中：<code>public static final String YES = &quot;yes&quot;;</code><br>类 B 中：<code>public static final String YES = &quot;y&quot;;</code><br><code>A.YES.equals(B.YES)</code>，预期是 <code>true</code>，但实际返回为 <code>false</code>，导致线上问题。</li>
+<li>子工程内部共享常量：即在当前子工程的 <code>constant</code> 目录下。</li>
+<li>包内共享常量：即在当前包下单独的 <code>constant</code> 目录下。</li>
+<li>类内共享常量：直接在类内部 <code>private static final</code> 定义。</li>
+</ul>
+<p>5.【推荐】如果变量值仅在一个范围内变化，且带有名称之外的延伸属性，定义为枚举类。下面 正例中的数字就是延伸信息，表示星期几。<br>正例：<code>public Enum { MONDAY(1), TUESDAY(2), WEDNESDAY(3), THURSDAY(4), FRIDAY(5), SATURDAY(6), SUNDAY(7);}</code></p>
+<h1 id="三、代码格式"><a href="#三、代码格式" class="headerlink" title="三、代码格式"></a>三、代码格式</h1><p>1.【强制】大括号的使用约定。如果是大括号内为空，则简洁地写成{}即可，不需要换行；如果 是非空代码块则：</p>
+<ul>
+<li>左大括号前不换行。</li>
+<li>左大括号后换行。</li>
+<li>右大括号前换行。</li>
+<li>右大括号后还有 <code>else</code> 等代码则不换行；表示终止的右大括号后必须换行。</li>
+</ul>
+<p>2.【强制】 左小括号和字符之间不出现空格；同样，右小括号和字符之间也不出现空格。详见 第 5 条下方正例提示。<br>反例：<code>if (空格 a == b 空格)</code>  </p>
+<p>3.【强制】<code>if/for/while/switch/do</code> 等保留字与括号之间都必须加空格。</p>
+<p>4.【强制】任何二目、三目运算符的左右两边都需要加一个空格。<br>说明：运算符包括赋值运算符=、逻辑运算符&amp;&amp;、加减乘除符号等。 </p>
+<p>5.【强制】采用 4 个空格缩进，禁止使用 tab 字符。<br>说明：如果使用 tab 缩进，必须设置 1 个 tab 为 4 个空格。IDEA 设置 tab 为 4 个空格时，<br>请勿勾选 <code>Use tab character</code>；而在 eclipse 中，必须勾选 <code>insert spaces for tabs</code>。 正例： （涉及 1-5 点） </p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 缩进 4 个空格      </span>
+        String say <span class="token operator">=</span> <span class="token string">"hello"</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 运算符的左右必须有一个空格     </span>
+        <span class="token keyword">int</span> flag <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 关键词 if 与括号之间必须有一个空格，括号内的 f 与左括号，0 与右括号不需要空格</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>flag <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>say<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 左大括号前加空格且不换行；左大括号后换行 </span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>flag <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"world"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 右大括号前换行，右大括号后有 else，不用换行</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"ok"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 在右大括号后直接结束，则必须换行</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>6.【强制】注释的双斜线与注释内容之间有且仅有一个空格。 正例：// 注释内容，注意 在//和注释内容之间有一个空格。</p>
+<p>7.【强制】单行字符数限制不超过 120 个，超出需要换行，换行时遵循如下原则：</p>
+<ul>
+<li>第二行相对第一行缩进 4 个空格，从第三行开始，不再继续缩进，参考示例。</li>
+<li>运算符与下文一起换行。 </li>
+<li>方法调用的点符号与下文一起换行。 </li>
+<li>方法调用时，多个参数，需要换行时，在逗号后进行。</li>
+<li>在括号前不要换行，见反例。<br>正例： </li>
+</ul>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        StringBuffer sb <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuffer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 超过 120 个字符的情况下，换行缩进 4 个空格，点号和方法名称一起换行</span>
+        sb<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"zi"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"xin"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+            <span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"huang"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+            <span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"huang"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+            <span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"huang"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>反例： </p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        StringBuffer sb <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuffer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 超过 120 个字符的情况下，不要在括号前换行  </span>
+        sb<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"zi"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"xin"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">append</span>
+                <span class="token punctuation">(</span><span class="token string">"huang"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 参数很多的方法调用可能超过 120 个字符，不要在逗号前换行 </span>
+        <span class="token function">method</span><span class="token punctuation">(</span>args1<span class="token punctuation">,</span> args2<span class="token punctuation">,</span> args3<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>      
+        <span class="token punctuation">,</span>argsX<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>8.【强制】方法参数在定义和传入时，多个参数逗号后边必须加空格。<br>正例：下例中实参的”a”,后边必须要有一个空格。<br><code>method(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;);</code></p>
+<p>9.【强制】IDE 的 text file encoding 设置为 UTF-8; IDE 中文件的换行符使用 Unix 格式， 不要使用 Windows 格式。</p>
+<p>10.【推荐】没有必要增加若干空格来使某一行的字符与上一行对应位置的字符对齐。 正例： </p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+        <span class="token keyword">long</span> b <span class="token operator">=</span> 4L<span class="token punctuation">;</span>
+        <span class="token keyword">float</span> c <span class="token operator">=</span> <span class="token number">5F</span><span class="token punctuation">;</span>
+        StringBuffer sb <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuffer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> 
+</code></pre>
+<p>说明：增加 sb 这个变量，如果需要对齐，则给 a、b、c 都要增加几个空格，在变量比较多的情况下，是一累赘的事情。 </p>
+<p>11.【推荐】方法体内的执行语句组、变量的定义语句组、不同的业务逻辑之间或者不同的语义 之间插入一个空行。相同业务逻辑和语义之间不需要插入空行。<br>说明：没有必要插入多个空行进行隔开。</p>
+<h1 id="四、OOP-规约"><a href="#四、OOP-规约" class="headerlink" title="四、OOP 规约"></a>四、OOP 规约</h1><p>1.【强制】避免通过一个类的对象引用访问此类的静态变量或静态方法，无谓增加编译器解析成本，直接用类名来访问即可。</p>
+<p>2.【强制】所有的覆写方法，必须加<code>@Override</code> 注解。<br>说明：<code>getObject()</code>与 <code>get0bject()</code>的问题。一个是字母的 O，一个是数字的 0，加<code>@Override</code> 可以准确判断是否覆盖成功。另外，如果在抽象类中对方法签名进行修改，其实现类会马上编 译报错。</p>
+<p>3.【强制】相同参数类型，相同业务含义，才可以使用 Java 的可变参数，避免使用 Object。 说明：可变参数必须放置在参数列表的最后。（提倡同学们尽量不用可变参数编程）<br>正例：</p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> User <span class="token function">getUsers</span><span class="token punctuation">(</span>String type<span class="token punctuation">,</span> Integer<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> ids<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>4.【强制】外部正在调用或者二方库依赖的接口，不允许修改方法签名，避免对接口调用方产生 影响。接口过时必须加<code>@Deprecated</code> 注解，并清晰地说明采用的新接口或者新服务是什么。 </p>
+<p>5.【强制】不能使用过时的类或方法。<br>说明：<code>java.net.URLDecoder</code> 中的方法 <code>decode(String encodeStr)</code> 这个方法已经过时，应 该使用双参数 <code>decode(String source, String encode)</code>。接口提供方既然明确是过时接口， 那么有义务同时提供新的接口；作为调用方来说，有义务去考证过时方法的新实现是什么。 </p>
+<p>6.【强制】<code>Object</code> 的 <code>equals</code> 方法容易抛空指针异常，应使用常量或确定有值的对象来调用 <code>equals</code>。<br>正例：<code>&quot;test&quot;.equals(object);</code><br>反例：<code>object.equals(&quot;test&quot;);</code><br>说明：推荐使用 <code>java.util.Objects#equals</code>（JDK7 引入的工具类）。</p>
+<p>7.【强制】所有的相同类型的包装类对象之间值的比较，全部使用 <code>equals</code> 方法比较。 说明：对于 <code>Integer var = ?</code>  在-128 至 127 范围内的赋值，<code>Integer</code> 对象是在<code>IntegerCache.cache</code> 产生，会复用已有对象，这个区间内的 <code>Integer</code> 值可以直接使用==进行 判断，但是这个区间之外的所有数据，都会在堆上产生，并不会复用已有对象，这是一个大坑， 推荐使用 <code>equals</code> 方法进行判断。</p>
+<p>8.关于基本数据类型与包装数据类型的使用标准如下： </p>
+<ul>
+<li>【强制】所有的 POJO 类属性必须使用包装数据类型。</li>
+<li>【强制】RPC 方法的返回值和参数必须使用包装数据类型。</li>
+<li>【推荐】所有的局部变量使用基本数据类型。<br>说明：<code>POJO</code> 类属性没有初值是提醒使用者在需要使用时，必须自己显式地进行赋值，任何 <code>NPE</code> 问题，或者入库检查，都由使用者来保证。<br>正例：数据库的查询结果可能是 <code>null</code>，因为自动拆箱，用基本数据类型接收有 <code>NPE</code> 风险。 反例：比如显示成交总额涨跌情况，即正负 x%，x 为基本数据类型，调用的 <code>RPC</code> 服务，调用 不成功时，返回的是默认值，页面显示为 0%，这是不合理的，应该显示成中划线。所以包装 数据类型的 <code>null</code> 值，能够表示额外的信息，如：远程调用失败，异常退出。</li>
+</ul>
+<p>9.【强制】定义 <code>DO/DTO/VO</code> 等 <code>POJO</code> 类时，不要设定任何属性默认值。<br>反例：<code>POJO</code> 类的 <code>gmtCreate</code> 默认值为 <code>new Date()</code>;但是这个属性在数据提取时并没有置入具 体值，在更新其它字段时又附带更新了此字段，导致创建时间被修改成当前时间。 </p>
+<p>10.【强制】序列化类新增属性时，请不要修改 <code>serialVersionUID</code> 字段，避免反序列失败；如 果完全不兼容升级，避免反序列化混乱，那么请修改 <code>serialVersionUID</code> 值。<br>说明：注意 <code>serialVersionUID</code> 不一致会抛出序列化运行时异常。 </p>
+<p>11.【强制】构造方法里面禁止加入任何业务逻辑，如果有初始化逻辑，请放在 <code>init</code> 方法中。 </p>
+<p>12.【强制】<code>POJO</code> 类必须写 <code>toString</code> 方法。使用 IDE 的中工具：source&gt; generate toString<br>时，如果继承了另一个 <code>POJO</code> 类，注意在前面加一下 <code>super.toString</code>。<br>说明：在方法执行抛出异常时，可以直接调用 <code>POJO</code> 的 <code>toString()</code>方法打印其属性值，便于排 查问题。 </p>
+<p>13.【推荐】使用索引访问用 <code>String</code> 的 <code>split</code> 方法得到的数组时，需做最后一个分隔符后有无 内容的检查，否则会有抛 <code>IndexOutOfBoundsException</code> 的风险。<br>说明： </p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        String str <span class="token operator">=</span> <span class="token string">"a,b,c,,"</span><span class="token punctuation">;</span>
+        String<span class="token punctuation">[</span><span class="token punctuation">]</span> ary <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 预期大于 3，结果是 3 </span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>ary<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>  
+</code></pre>
+<p>14.【推荐】当一个类有多个构造方法，或者多个同名方法，这些方法应该按顺序放置在一起， 便于阅读，此条规则优先于第 15 条规则。 </p>
+<p>15.【推荐】 类内方法定义顺序依次是：公有方法或保护方法 &gt; 私有方法 &gt; getter/setter 方法。<br>说明：公有方法是类的调用者和维护者最关心的方法，首屏展示最好；保护方法虽然只是子类 关心，也可能是“模板设计模式”下的核心方法；而私有方法外部一般不需要特别关心，是一个 黑盒实现；因为承载的信息价值较低，所有 <code>Service</code> 和 <code>DAO</code> 的 <code>getter/setter</code> 方法放在类体 最后。</p>
+<p>16.【推荐】<code>setter</code> 方法中，参数名称与类成员变量名称一致，<code>this.成员名 = 参数名</code>。在 <code>getter/setter</code> 方法中，不要增加业务逻辑，增加排查问题的难度。<br>反例：</p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> Integer <span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token number">100</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">-</span> <span class="token number">100</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>17.【推荐】循环体内，字符串的连接方式，使用 <code>StringBuilder</code> 的 <code>append</code> 方法进行扩展。 说明：反编译出的字节码文件显示每次循环都会 <code>new</code> 出一个 <code>StringBuilder</code> 对象，然后进行 <code>append</code> 操作，最后通过 <code>toString</code> 方法返回 <code>String</code> 对象，造成内存资源浪费。<br>反例： </p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        String str <span class="token operator">=</span> <span class="token string">"start"</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            str <span class="token operator">=</span> str <span class="token operator">+</span> <span class="token string">"hello"</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>18.【推荐】final 可以声明类、成员变量、方法、以及本地变量，下列情况使用 <code>final</code> 关键字：</p>
+<ul>
+<li>不允许被继承的类，如：<code>String</code> 类。</li>
+<li>不允许修改引用的域对象，如：<code>POJO</code> 类的域变量。</li>
+<li>不允许被重写的方法，如：<code>POJO</code> 类的 <code>setter</code> 方法。</li>
+<li>不允许运行过程中重新赋值的局部变量。</li>
+<li>避免上下文重复使用一个变量，使用 <code>final</code> 描述可以强制重新定义一个变量，方便更好 地进行重构。</li>
+</ul>
+<p>19.【推荐】慎用 <code>Object</code> 的 <code>clone</code> 方法来拷贝对象。<br>说明：对象的 <code>clone</code> 方法默认是浅拷贝，若想实现深拷贝需要重写 <code>clone</code> 方法实现属性对象 的拷贝。</p>
+<p>20.【推荐】类成员与方法访问控制从严： </p>
+<ul>
+<li>如果不允许外部直接通过 <code>new</code> 来创建对象，那么构造方法必须是 <code>private</code>。</li>
+<li>工具类不允许有 <code>public</code> 或 <code>default</code> 构造方法。</li>
+<li>类非 <code>static</code> 成员变量并且与子类共享，必须是 <code>protected</code>。 </li>
+<li>类非 <code>static</code> 成员变量并且仅在本类使用，必须是 <code>private</code>。</li>
+<li>类 <code>static</code> 成员变量如果仅在本类使用，必须是 <code>private</code>。</li>
+<li>若是 <code>static</code> 成员变量，必须考虑是否为 <code>final</code>。</li>
+<li>类成员方法只供类内部调用，必须是<code>private</code>。 </li>
+<li>类成员方法只对继承类公开，那么限制为 <code>protected</code>。<br>说明：任何类、方法、参数、变量，严控访问范围。过于宽泛的访问范围，不利于模块解耦。 思考：如果是一个 <code>private</code> 的方法，想删除就删除，可是一个 <code>public</code> 的 <code>service</code> 方法，或者 一个 <code>public</code> 的成员变量，删除一下，不得手心冒点汗吗？变量像自己的小孩，尽量在自己的 视线内，变量作用域太大，无限制的到处跑，那么你会担心的。</li>
+</ul>
+<h1 id="五、集合处理"><a href="#五、集合处理" class="headerlink" title="五、集合处理"></a>五、集合处理</h1><p>1.【强制】关于 <code>hashCode</code> 和 <code>equals</code> 的处理，遵循如下规则：</p>
+<ul>
+<li>只要重写 <code>equals</code>，就必须重写 <code>hashCode</code>。</li>
+<li>因为 <code>Set</code> 存储的是不重复的对象，依据 <code>hashCode</code> 和 <code>equals</code> 进行判断，所以 <code>Set</code> 存储的 对象必须重写这两个方法。</li>
+<li>如果自定义对象做为 <code>Map</code> 的键，那么必须重写 <code>hashCode</code> 和 <code>equals</code>。<br>说明：<code>String</code> 重写了 <code>hashCode</code> 和 <code>equals</code> 方法，所以我们可以非常愉快地使用 <code>String</code> 对象 作为 <code>key</code> 来使用。</li>
+</ul>
+<p>2.【强制】<code>ArrayList</code>的<code>subList</code>结果不可强转成<code>ArrayList</code>，否则会抛出<code>ClassCastException</code> 异常，即 <code>java.util.RandomAccessSubList cannot be cast to java.util.ArrayList</code>. 说明：<code>subList</code> 返回的是 <code>ArrayList</code> 的内部类 <code>SubList</code>，并不是 <code>ArrayList</code>，而是 <code>ArrayList</code> 的一个视图，对于 <code>SubList</code> 子列表的所有操作最终会反映到原列表上。</p>
+<p>3.【强制】在 <code>subList</code> 场景中，高度注意对原集合元素个数的修改，会导致子列表的遍历、增加、 删除均会产生 <code>ConcurrentModificationException</code> 异常。 </p>
+<p>4.【强制】使用集合转数组的方法，必须使用集合的 <code>toArray(T[] array)</code>，传入的是类型完全 一样的数组，大小就是 <code>list.size()</code>。<br>说明：使用 <code>toArray</code> 带参方法，入参分配的数组空间不够大时，<code>toArray</code> 方法内部将重新分配 内存空间，并返回新数组地址；如果数组元素大于实际所需，下标为<code>[ list.size() ]</code>的数组 元素将被置为 <code>null</code>，其它数组元素保持原值，因此最好将方法入参数组大小定义与集合元素 个数一致。<br>正例： </p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        List<span class="token operator">&lt;</span>String<span class="token operator">></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"guan"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"bao"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        String<span class="token punctuation">[</span><span class="token punctuation">]</span> array <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span>list<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        array <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> 
+</code></pre>
+<p>反例：直接使用 <code>toArray</code> 无参方法存在问题，此方法返回值只能是 <code>Object[]</code>类，若强转其它 类型数组将出现 <code>ClassCastException</code> 错误。</p>
+<p>5.【强制】使用工具类 <code>Arrays.asList()</code>把数组转换成集合时，不能使用其修改集合相关的方 法，它的 <code>add/remove/clear</code> 方法会抛出 <code>UnsupportedOperationException</code> 异常。<br>说明：<code>asList</code> 的返回对象是一个<code>Arrays</code> 内部类，并没有实现集合的修改方法。<code>Arrays.asList</code> 体现的是适配器模式，只是转换接口，后台的数据仍是数组。</p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        String<span class="token punctuation">[</span><span class="token punctuation">]</span> str <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token string">"you"</span><span class="token punctuation">,</span> <span class="token string">"wu"</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        List list <span class="token operator">=</span> Arrays<span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>第一种情况：<code>list.add(&quot;yangguanbao&quot;);</code> 运行时异常。<br>第二种情况：<code>str[0] = &quot;gujin&quot;;</code> 那么 <code>list.get(0)</code>也会随之修改。 </p>
+<p>6.【强制】泛型通配符<code>&lt;? extends T&gt;</code>来接收返回的数据，此写法的泛型集合不能使用 <code>add</code> 方 法，而<code>&lt;? super T&gt;</code>不能使用 <code>get</code> 方法，做为接口调用赋值时易出错。<br>说明：扩展说一下 <code>PECS(Producer Extends Consumer Super)</code>原则：第一、频繁往外读取内 容的，适合用<code>&lt;? extends T&gt;</code>。第二、经常往里插入的，适合用<code>&lt;? super T&gt;</code>。 </p>
+<p>7.【强制】不要在 <code>foreach</code> 循环里进行元素的 <code>remove/add</code> 操作。<code>remove</code> 元素请使用 <code>Iterator</code> 方式，如果并发操作，需要对 <code>Iterator</code> 对象加锁。<br>正例： </p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Iterator<span class="token operator">&lt;</span>String<span class="token operator">></span> iterator <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            String item <span class="token operator">=</span> iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>删除元素的条件<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                iterator<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>反例： </p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        List<span class="token operator">&lt;</span>String<span class="token operator">></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>String item <span class="token operator">:</span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                list<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> 
+</code></pre>
+<p>说明：以上代码的执行结果肯定会出乎大家的意料，那么试一下把“1”换成“2”，会是同样的 结果吗？</p>
+<p>8.【强制】 在 JDK7 版本及以上，<code>Comparator</code> 要满足如下三个条件，不然 <code>Arrays.sort</code>， <code>Collections.sort</code> 会报 <code>IllegalArgumentException</code> 异常。<br>说明：三个条件如下 </p>
+<ul>
+<li>x，y 的比较结果和 y，x 的比较结果相反。</li>
+<li>x&gt;y，y&gt;z，则 x&gt;z。</li>
+<li>x=y，则 x，z 比较结果和 y，z 比较结果相同。<br>反例：下例中没有处理相等的情况，实际使用中可能会出现异常：<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">new</span> <span class="token class-name">Comparator</span><span class="token operator">&lt;</span>Student<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">compare</span><span class="token punctuation">(</span>Student o1<span class="token punctuation">,</span> Student o2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> o1<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> o2<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token number">1</span> <span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+<p>9.【推荐】集合初始化时，指定集合初始值大小。<br>说明：<code>HashMap</code> 使用 <code>HashMap(int initialCapacity)</code> 初始化，<br>正例：<code>initialCapacity = (需要存储的元素个数 / 负载因子) + 1</code>。注意负载因子（即 loader factor）默认为 0.75，如果暂时无法确定初始值大小，请设置为 16（即默认值）。<br>反例：<code>HashMap</code>需要放置1024个元素，由于没有设置容量初始大小，随着元素不断增加，容量 7 次被迫扩大，<code>resize</code> 需要重建 <code>hash</code>表，严重影响性能。</p>
+<p>10.【推荐】使用 <code>entrySet</code> 遍历<code>Map</code> 类集合 <code>KV</code>，而不是 <code>keySet</code> 方式进行遍历。<br>说明：<code>keySet</code> 其实是遍历了 2 次，一次是转为 <code>Iterator</code> 对象，另一次是从 <code>hashMap</code> 中取出 <code>key</code> 所对应的 <code>value</code>。而 <code>entrySet</code> 只是遍历了一次就把 <code>key</code> 和 <code>value</code> 都放到了 <code>entry</code> 中，效 率更高。如果是 JDK8，使用 <code>Map.foreach</code> 方法。<br>正例：<code>values()</code>返回的是 <code>V</code> 值集合，是一个 <code>list</code> 集合对象；<code>keySet()</code>返回的是 <code>K</code>值集合，是 一个 <code>Set</code> 集合对象；<code>entrySet()</code>返回的是 <code>K-V</code> 值组合集合。<br>11.【推荐】高度注意 <code>Map</code> 类集合 <code>K/V</code> 能不能存储 <code>null</code> 值的情况，如下表格：</p>
+<table>
+<thead>
+<tr>
+<th>集合类</th>
+<th>Key</th>
+<th>Value</th>
+<th>Super</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hashtable</td>
+<td>不允许为 null</td>
+<td>不允许为 null</td>
+<td>Dictionary</td>
+<td>线程安全</td>
+</tr>
+<tr>
+<td>ConcurrentHashMap</td>
+<td>不允许为 null</td>
+<td>不允许为 null</td>
+<td>AbstractMap</td>
+<td>锁分段技术（JDK8:CAS）</td>
+</tr>
+<tr>
+<td>TreeMap</td>
+<td>不允许为 null</td>
+<td>允许为 null</td>
+<td>AbstractMap</td>
+<td>线程不安全</td>
+</tr>
+<tr>
+<td>HashMap</td>
+<td>允许为 null</td>
+<td>允许为 null</td>
+<td>AbstractMap</td>
+<td>线程不安全</td>
+</tr>
+</tbody>
+</table>
+<p>反例： 由于 <code>HashMap</code> 的干扰，很多人认为 <code>ConcurrentHashMap</code> 是可以置入 <code>null</code> 值，而事实上， 存储 <code>null</code> 值时会抛出 <code>NPE</code> 异常。</p>
+<p>12.【参考】合理利用好集合的有序性(sort)和稳定性(order)，避免集合的无序性(unsort)和 不稳定性(unorder)带来的负面影响。<br>说明：有序性是指遍历的结果是按某种比较规则依次排列的。稳定性指集合每次遍历的元素次 序是一定的。如：<code>ArrayList</code> 是 <code>order/unsort</code>；<code>HashMap</code> 是 <code>unorder/unsort</code>；<code>TreeSet</code> 是 <code>order/sort</code>。 </p>
+<p>13.【参考】利用 <code>Set</code> 元素唯一的特性，可以快速对一个集合进行去重操作，避免使用 <code>List</code> 的 <code>contains</code> 方法进行遍历、对比、去重操作。 </p>
+<h1 id="六、并发处理"><a href="#六、并发处理" class="headerlink" title="六、并发处理"></a>六、并发处理</h1><p>1.【强制】获取单例对象需要保证线程安全，其中的方法也要保证线程安全。 说明：资源驱动类、工具类、单例工厂类都需要注意。</p>
+<p>2.【强制】创建线程或线程池时请指定有意义的线程名称，方便出错时回溯。 正例： </p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Singleton</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TimerTaskThread</span> <span class="token keyword">extends</span> <span class="token class-name">Thread</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token function">TimerTaskThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"TimerTaskThread"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">// ...  </span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>3.【强制】线程资源必须通过线程池提供，不允许在应用中自行显式创建线程。<br>说明：使用线程池的好处是减少在创建和销毁线程上所花的时间以及系统资源的开销，解决资 源不足的问题。如果不使用线程池，有可能造成系统创建大量同类线程而导致消耗完内存或者 “过度切换”的问题。</p>
+<p>4.【强制】线程池不允许使用 <code>Executors</code> 去创建，而是通过 <code>ThreadPoolExecutor</code> 的方式，这样 的处理方式让写的同学更加明确线程池的运行规则，规避资源耗尽的风险。<br>说明：<code>Executors</code> 返回的线程池对象的弊端如下：</p>
+<ul>
+<li><code>FixedThreadPool</code> 和 <code>SingleThreadPool</code>:<br>允许的请求队列长度为<code>Integer.MAX_VALUE</code>，可能会堆积大量的请求，从而导致 <code>OOM</code>。</li>
+<li><code>CachedThreadPool</code> 和 <code>ScheduledThreadPool</code>:<br>允许的创建线程数量为<code>Integer.MAX_VALUE</code>，可能会创建大量的线程，从而导致 <code>OOM</code>。</li>
+</ul>
+<p>5.【强制】<code>SimpleDateFormat</code> 是线程不安全的类，一般不要定义为 <code>static</code> 变量，如果定义为 <code>static</code>，必须加锁，或者使用 <code>DateUtils</code> 工具类。<br>正例：注意线程安全，使用 <code>DateUtils</code>。亦推荐如下处理：</p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Singleton</span> <span class="token punctuation">{</span>
+        <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> ThreadLocal<span class="token operator">&lt;</span>DateFormat<span class="token operator">></span> df <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreadLocal</span><span class="token operator">&lt;</span>DateFormat<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">protected</span> DateFormat <span class="token function">initialValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">SimpleDateFormat</span><span class="token punctuation">(</span><span class="token string">"yyyy-MM-dd"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>说明：如果是 JDK8 的应用，可以使用 <code>Instant</code> 代替 <code>Date</code>，<code>LocalDateTime</code> 代替 <code>Calendar</code>， <code>DateTimeFormatter</code> 代替 <code>SimpleDateFormat</code>，官方给出的解释：<code>simple beautiful strong immutable thread-safe</code>。 </p>
+<p>6.【强制】高并发时，同步调用应该去考量锁的性能损耗。能用无锁数据结构，就不要用锁；能 锁区块，就不要锁整个方法体；能用对象锁，就不要用类锁。<br>说明：尽可能使加锁的代码块工作量尽可能的小，避免在锁代码块中调用 RPC 方法。 </p>
+<p>7.【强制】对多个资源、数据库表、对象同时加锁时，需要保持一致的加锁顺序，否则可能会造 成死锁。<br>说明：线程一需要对表 A、B、C 依次全部加锁后才可以进行更新操作，那么线程二的加锁顺序 也必须是 A、B、C，否则可能出现死锁。</p>
+<p>8.【强制】并发修改同一记录时，避免更新丢失，需要加锁。要么在应用层加锁，要么在缓存加 锁，要么在数据库层使用乐观锁，使用 version 作为更新依据。<br>说明：如果每次访问冲突概率小于 20%，推荐使用乐观锁，否则使用悲观锁。乐观锁的重试次 数不得小于 3 次。</p>
+<p>9.【强制】多线程并行处理定时任务时，<code>Timer</code> 运行多个 <code>TimeTask</code> 时，只要其中之一没有捕获 抛出的异常，其它任务便会自动终止运行，使用 <code>ScheduledExecutorService</code> 则没有这个问题。 </p>
+<p>10.【推荐】使用 <code>CountDownLatch</code> 进行异步转同步操作，每个线程退出前必须调用 <code>countDown</code> 方法，线程执行代码注意 <code>catch</code> 异常，确保 <code>countDown</code> 方法被执行到，避免主线程无法执行至 await 方法，直到超时才返回结果。<br>说明：注意，子线程抛出异常堆栈，不能在主线程 <code>try-catch</code> 到。</p>
+<p>11.【推荐】避免 <code>Random</code> 实例被多线程使用，虽然共享该实例是线程安全的，但会因竞争同一 <code>seed</code> 导致的性能下降。<br>说明：<code>Random</code> 实例包括 <code>java.util.Random</code> 的实例或者 <code>Math.random()</code>的方式。<br>正例：在 JDK7 之后，可以直接使用 <code>API ThreadLocalRandom</code>，而在 JDK7 之前，需要编码保 证每个线程持有一个实例。</p>
+<p>12.【推荐】在并发场景下，通过双重检查锁（double-checked locking）实现延迟初始化的优 化问题隐患(可参考 The “Double-Checked Locking is Broken” Declaration)，推荐解 决方案中较为简单一种（适用于 JDK5 及以上版本），将目标属性声明为 <code>volatile</code> 型。<br>反例： </p>
+<pre class=" highlight language-java"><code class="language-java"> <span class="token keyword">class</span> <span class="token class-name">Singleton</span> <span class="token punctuation">{</span>
+        <span class="token keyword">private</span> Helper helper <span class="token operator">=</span> null<span class="token punctuation">;</span>
+        <span class="token keyword">public</span> Helper <span class="token function">getHelper</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>helper <span class="token operator">==</span> null<span class="token punctuation">)</span>
+                <span class="token keyword">synchronized</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>helper <span class="token operator">==</span> null<span class="token punctuation">)</span>
+                        helper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Helper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> helper<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// other methods and fields...  </span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>13.【参考】<code>volatile</code> 解决多线程内存不可见问题。对于一写多读，是可以解决变量同步问题， 但是如果多写，同样无法解决线程安全问题。如果是 <code>count++</code>操作，使用如下类实现： <code>AtomicInteger count = new AtomicInteger(); count.addAndGet(1);</code> 如果是 JDK8，推 荐使用 <code>LongAdder</code> 对象，比 <code>AtomicLong</code>性能更好（减少乐观锁的重试次数）。</p>
+<p>14.【参考】 <code>HashMap</code> 在容量不够进行 <code>resize</code> 时由于高并发可能出现死链，导致 CPU 飙升，在 开发过程中可以使用其它数据结构或加锁来规避此风险。 </p>
+<p>15.【参考】<code>ThreadLocal</code> 无法解决共享对象的更新问题，<code>ThreadLocal</code> 对象建议使用 <code>static</code> 修饰。这个变量是针对一个线程内所有操作共享的，所以设置为静态变量，所有此类实例共享 此静态变量 ，也就是说在类第一次被使用时装载，只分配一块存储空间，所有此类的对象(只 要是这个线程内定义的)都可以操控这个变量。</p>
+<h1 id="七、控制语句"><a href="#七、控制语句" class="headerlink" title="七、控制语句"></a>七、控制语句</h1><p>1.【强制】在一个 <code>switch</code> 块内，每个 <code>case</code> 要么通过 <code>break/return</code> 等来终止，要么注释说明程 序将继续执行到哪一个 <code>case</code> 为止；在一个 <code>switch</code> 块内，都必须包含一个 <code>default</code> 语句并且 放在最后，即使它什么代码也没有。</p>
+<p>2.【强制】在 <code>if/else/for/while/do</code> 语句中必须使用大括号。即使只有一行代码，避免采用 单行的编码方式：<code>if (condition) statements;</code></p>
+<p>3.【推荐】表达异常的分支时，少用 <code>if-else</code> 方式，这种方式可以改写成：</p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token punctuation">{</span>     
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+            <span class="token keyword">return</span> obj<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>  
+<span class="token comment" spellcheck="true">// 接着写 else 的业务逻辑代码;  </span>
+</code></pre>
+<p>说明：如果非得使用 <code>if()...else if()...else...</code>方式表达逻辑，【强制】避免后续代码维 护困难，请勿超过 3 层。<br>正例：超过 3 层的 <code>if-else</code> 的逻辑判断代码可以使用卫语句、策略模式、状态模式等来实现， 其中卫语句示例如下： </p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">today</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isBusy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"change time."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isFree</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"go to travel."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"stay at home to learn Alibaba Java Coding Guidelines."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>4.【推荐】除常用方法（如 getXxx/isXxx）等外，不要在条件判断中执行其它复杂的语句，将复 杂逻辑判断的结果赋值给一个有意义的布尔变量名，以提高可读性。<br>  说明：很多 if 语句内的逻辑相当复杂，阅读者需要分析条件表达式的最终结果，才能明确什么 样的条件执行什么样的语句，那么，如果阅读者分析逻辑表达式错误呢？<br>  正例： </p>
+<pre class=" highlight language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// 伪代码如下 </span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">final</span> <span class="token keyword">boolean</span> existed <span class="token operator">=</span> <span class="token punctuation">(</span>file<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span> <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token operator">||</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>existed<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p> 反例： </p>
+<pre class=" highlight language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>file<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span> <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token operator">||</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span> 
+             <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> 
+</code></pre>
+<p>5.【推荐】循环体中的语句要考量性能，以下操作尽量移至循环体外处理，如定义对象、变量、 获取数据库连接，进行不必要的 <code>try-catch</code> 操作（这个 <code>try-catch</code> 是否可以移至循环体外）。</p>
+<p>6.【推荐】接口入参保护，这种场景常见的是用于做批量操作的接口。</p>
+<p>7.【参考】下列情形，需要进行参数校验：</p>
+<ul>
+<li>调用频次低的方法。</li>
+<li>执行时间开销很大的方法。此情形中，参数校验时间几乎可以忽略不计，但如果因为参 数错误导致中间执行回退，或者错误，那得不偿失。</li>
+<li>需要极高稳定性和可用性的方法。</li>
+<li>对外提供的开放接口，不管是 <code>RPC/API/HTTP</code> 接口。</li>
+<li>敏感权限入口。</li>
+</ul>
+<p>8.【参考】下列情形，不需要进行参数校验：</p>
+<ul>
+<li>极有可能被循环调用的方法。但在方法说明里必须注明外部参数检查要求。</li>
+<li>底层调用频度比较高的方法。毕竟是像纯净水过滤的最后一道，参数错误不太可能到底 层才会暴露问题。一般 <code>DAO</code> 层与 <code>Service</code> 层都在同一个应用中，部署在同一台服务器中，所 以 <code>DAO</code> 的参数校验，可以省略。</li>
+<li>被声明成 <code>private</code> 只会被自己代码所调用的方法，如果能够确定调用方法的代码传入参 数已经做过检查或者肯定不会有问题，此时可以不校验参数。</li>
+</ul>
+<h1 id="八、注释规约"><a href="#八、注释规约" class="headerlink" title="八、注释规约"></a>八、注释规约</h1><p>1.【强制】类、类属性、类方法的注释必须使用 <code>Javadoc</code> 规范，使用/*<em>内容</em>/格式，不得使用 // xxx 方式。<br>说明：在 IDE 编辑窗口中，<code>Javadoc</code> 方式会提示相关注释，生成 <code>Javadoc</code> 可以正确输出相应注 释；在 IDE 中，工程调用方法时，不进入方法即可悬浮提示方法、参数、返回值的意义，提高 阅读效率。</p>
+<p>2.【强制】所有的抽象方法（包括接口中的方法）必须要用 <code>Javadoc</code> 注释、除了返回值、参数、 异常说明外，还必须指出该方法做什么事情，实现什么功能。<br>说明：对子类的实现要求，或者调用注意事项，请一并说明。</p>
+<p>3.【强制】所有的类都必须添加创建者和创建日期。</p>
+<p>4.【强制】方法内部单行注释，在被注释语句上方另起一行，使用//注释。方法内部多行注释 使用/<em> </em>/注释，注意与代码对齐。 </p>
+<p>5.【强制】所有的枚举类型字段必须要有注释，说明每个数据项的用途。 </p>
+<p>6.【推荐】与其“半吊子”英文来注释，不如用中文注释把问题说清楚。专有名词与关键字保持 英文原文即可。<br>反例：“TCP 连接超时”解释成“传输控制协议连接超时”，理解反而费脑筋。 </p>
+<p>7.【推荐】代码修改的同时，注释也要进行相应的修改，尤其是参数、返回值、异常、核心逻辑 等的修改。<br>说明：代码与注释更新不同步，就像路网与导航软件更新不同步一样，如果导航软件严重滞后， 就失去了导航的意义。 </p>
+<p>8.【参考】谨慎注释掉代码。在上方详细说明，而不是简单地注释掉。如果无用，则删除。 说明：代码被注释掉有两种可能性：1）后续会恢复此段代码逻辑。2）永久不用。前者如果没 有备注信息，难以知晓注释动机。后者建议直接删掉（代码仓库保存了历史代码）。 </p>
+<p>9.【参考】对于注释的要求：第一、能够准确反应设计思想和代码逻辑；第二、能够描述业务含 义，使别的程序员能够迅速了解到代码背后的信息。完全没有注释的大段代码对于阅读者形同 天书，注释是给自己看的，即使隔很长时间，也能清晰理解当时的思路；注释也是给继任者看 的，使其能够快速接替自己的工作。 </p>
+<p>10.【参考】好的命名、代码结构是自解释的，注释力求精简准确、表达到位。避免出现注释的 一个极端：过多过滥的注释，代码的逻辑一旦修改，修改注释是相当大的负担。<br>反例： </p>
+<pre class=" highlight language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// put elephant into fridge  </span>
+   <span class="token function">put</span><span class="token punctuation">(</span>elephant<span class="token punctuation">,</span> fridge<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</code></pre>
+<p>方法名 <code>put</code>，加上两个有意义的变量名 <code>elephant</code> 和 <code>fridge</code>，已经说明了这是在干什么，语 义清晰的代码不需要额外的注释。</p>
+<p>11.【参考】特殊注释标记，请注明标记人与标记时间。注意及时处理这些标记，通过标记扫描， 经常清理此类标记。线上故障有时候就是来源于这些标记处的代码。 </p>
+<ul>
+<li>待办事宜（<code>TODO</code>）:（ 标记人，标记时间，[预计处理时间]）<br>表示需要实现，但目前还未实现的功能。这实际上是一个 <code>Javadoc</code> 的标签，目前的 <code>Javadoc</code> 还没有实现，但已经被广泛使用。只能应用于类，接口和方法（因为它是一个 <code>Javadoc</code> 标签）。 </li>
+<li>错误，不能工作（FIXME）:（标记人，标记时间，[预计处理时间]）<br>在注释中用 FIXME 标记某代码是错误的，而且不能工作，需要及时纠正的情况。  </li>
+</ul>
+<h1 id="九、其它"><a href="#九、其它" class="headerlink" title="九、其它"></a>九、其它</h1><p>1.【强制】在使用正则表达式时，利用好其预编译功能，可以有效加快正则匹配速度。 说明：不要在方法体内定义：<code>Pattern pattern = Pattern.compile</code>(规则);</p>
+<p>2.【强制】<code>velocity</code> 调用 <code>POJO</code> 类的属性时，建议直接使用属性名取值即可，模板引擎会自动按 规范调用 <code>POJO</code> 的 <code>getXxx()</code>，如果是 <code>boolean</code> 基本数据类型变量（<code>boolean</code> 命名不需要加 <code>is</code> 前缀），会自动调用 isXxx()方法。<br>说明：注意如果是 <code>Boolean</code> 包装类对象，优先调用 <code>getXxx()</code>的方法。</p>
+<p>3.【强制】后台输送给页面的变量必须加<code>$!{var}</code>——中间的感叹号。<br>说明：如果 <code>var=null</code> 或者不存在，那么<code>${var}</code>会直接显示在页面上。</p>
+<p>4.【强制】注意 <code>Math.random()</code> 这个方法返回是 <code>double</code> 类型，注意取值的范围 <code>0≤x&lt;1</code>（能够 取到零值，注意除零异常），如果想获取整数类型的随机数，不要将 x 放大 10 的若干倍然后 取整，直接使用 <code>Random</code> 对象的 <code>nextInt</code> 或者 <code>nextLong</code> 方法。</p>
+<p>5.【强制】获取当前毫秒数 <code>System.currentTimeMillis();</code> 而不是 <code>new Date().getTime();</code> 说明：如果想获取更加精确的纳秒级时间值，使用 <code>System.nanoTime()</code>的方式。在 JDK8 中， 针对统计时间等场景，推荐使用 <code>Instant</code> 类。</p>
+<p>6.【推荐】不要在视图模板中加入任何复杂的逻辑。<br>说明：根据<code>MVC</code> 理论，视图的职责是展示，不要抢模型和控制器的活。</p>
+<p>7.【推荐】任何数据结构的构造或初始化，都应指定大小，避免数据结构无限增长吃光内存。</p>
+<p>8.【推荐】及时清理不再使用的代码段或配置信息。<br>说明：对于垃圾代码或过时配置，坚决清理干净，避免程序过度臃肿，代码冗余。<br>正例：对于暂时被注释掉，后续可能恢复使用的代码片断，在注释代码上方，统一规定使用三 个斜杠(///)来说明注释掉代码的理由。</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="column col-3 hide-lg docs-toc-section">
+            <div class="container px-0">
+                <div id="post-toc">
+                    
+                        <p class="h4 text-bold">目录</p>
+                        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、命名风格"><span class="post-toc-text">一、命名风格</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、常量定义"><span class="post-toc-text">二、常量定义</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、代码格式"><span class="post-toc-text">三、代码格式</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四、OOP-规约"><span class="post-toc-text">四、OOP 规约</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#五、集合处理"><span class="post-toc-text">五、集合处理</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#六、并发处理"><span class="post-toc-text">六、并发处理</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#七、控制语句"><span class="post-toc-text">七、控制语句</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#八、注释规约"><span class="post-toc-text">八、注释规约</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#九、其它"><span class="post-toc-text">九、其它</span></a></li></ol>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <p class="mb-2"><a href="https://hand-mabu.github.io/mabu-code-guide/" target="_blank">Home</a> · <a href="https://github.com/hand-mabu/mabu-code-guide" target="_blank">GitHub</a>
+    </p><p>Designed and built with by <a href="https://github.com/hand-mabu" target="_blank">MABU</a>. Licensed under the <a href="https://github.com/hand-mabu/mabu-code-guide/blob/dev/LICENSE" target="_blank">GPL V3 License</a>.</p>
+</footer>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <script src="/mabu-code-guide/jquery.min.js"></script>
+    <script src="/mabu-code-guide/index.js"></script>
+    <script src="/mabu-code-guide/local-search.min.js"></script>
+    <script>
+        searchFunc('/mabu-code-guide/search.json')
+    </script>
+</body>
+
+</html>

@@ -2,7 +2,7 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <title>MABU 代码规范 | MabuDoc Theme</title>
+    <title>安全规约 | MabuDoc Theme</title>
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
     <meta name="description" content="Modern, powerful and simple theme for Hexo.">
@@ -38,7 +38,7 @@
         </section>
         <section class="navbar-section">
             
-            <a href="/mabu-code-guide/" class="btn btn-link navbar-link">English</a>
+            <a href="/mabu-code-guide/backend/SafetyRules/" class="btn btn-link navbar-link">简体中文</a>
             
         </section>
     </div>
@@ -57,7 +57,7 @@
     <div id="search-result"></div>
     <ul class="nav">
 
-<li class="nav-item active" style>
+<li class="nav-item" style>
     <a href="/mabu-code-guide/">
         MABU 代码规范
     </a>
@@ -117,7 +117,7 @@
     </a>
 </li>
 
-<li class="nav-item" style>
+<li class="nav-item active" style>
     <a href="/mabu-code-guide/backend/SafetyRules/">
         安全规约
     </a>
@@ -149,7 +149,7 @@
     <!-- <ul class="nav"> -->
     <!-- 
         <li class="nav-item">
-            <a href="/mabu-code-guide/config/">Theme Config</a>
+            <a href="/mabu-code-guide/en/config/">Theme Config</a>
         </li>
     -->
     <!-- </ul> -->
@@ -168,13 +168,11 @@
 <div class="docs-header">
     <div class="docs-header-wrapper">
         <div class="title-wrapper">
-            <h1 class="docs-header-title mb-1">MABU 代码规范</h1>
-            
-                <p class="h4 mb-2">吸取各大项目经验和规范结合自身情况总结而出</p>
+            <h1 class="docs-header-title mb-1">安全规约</h1>
             
         </div>
         <!-- <span class="label label-rounded bg-dark mt-2">
-            <a class="docs-github" href="https://github.com/theme-suka/docs/tree/master/source/index.md" target="_blank">在 GitHub 上编辑</a>
+            <a class="docs-github" href="https://github.com/theme-suka/docs/tree/master/source/backend/SafetyRules.md" target="_blank">在 GitHub 上编辑</a>
         </span> -->
     </div>
 </div>
@@ -184,32 +182,22 @@
         <div class="column col-9 col-lg-12 docs-content-section">
             <div class="container px-0">
                 <div id="post-content">
-                    <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><ul>
-<li><a href="./frontend/namingRules">命名规范</a></li>
-<li><a href="./frontend/HTML/">HTML规范</a></li>
-<li><a href="./frontend/CSS_SCSS/">CSS/SCSS规范</a></li>
-<li><a href="./frontend/JavaScript/">JavaScript规范</a></li>
-</ul>
-<h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><ul>
-<li><a href="./backend/ProgramRules/">编程规约</a></li>
-<li><a href="./backend/ExceptionLog/">异常日志</a></li>
-<li><a href="./backend/UnitTest/">单元测试</a></li>
-<li><a href="./backend/SafetyRules/">安全规约</a></li>
-<li><a href="./backend/MysqlDatabase/">MYSQL数据库</a></li>
-<li><a href="./backend/EngineeringStructure/">工程结构</a></li>
-<li><a href="./backend/ProperNoun/">专有名词</a></li>
-</ul>
-<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><ul>
-<li><a href="./gitend/git/#分支命名">分支命名规范</a></li>
-<li><a href="./gitend/git/#提交">代码提交规范</a></li>
-<li><a href="./gitend/git/#合并主分支">合并代码规范</a></li>
-</ul>
-<hr>
-<p>鸣谢:</p>
+                    <p>1.【强制】隶属于用户个人的页面或者功能必须进行权限控制校验。<br>说明：防止没有做水平权限校验就可随意访问、修改、删除别人的数据，比如查看他人的私信内容、修改他人的订单。</p>
+<p>2.【强制】用户敏感数据禁止直接展示，必须对展示数据进行脱敏。<br>说明：查看个人手机号码会显示成:158<em>**</em>9119，隐藏中间 4 位，防止隐私泄露。</p>
+<p>3.【强制】用户输入的 SQL 参数严格使用参数绑定或者 METADATA 字段值限定，防止 SQL 注入，禁止字符串拼接 SQL 访问数据库。</p>
+<p>4.【强制】用户请求传入的任何参数必须做有效性验证。说明：忽略参数校验可能导致：</p>
 <ul>
-<li>阿里巴巴后端规范手册</li>
-<li><a href="http://alloyteam.github.io/CodeGuide/" target="_blank" rel="noopener">AlloyTeam</a> 前端规范</li>
+<li><code>page size</code> 过大导致内存溢出</li>
+<li>恶意 <code>order by</code> 导致数据库慢查询</li>
+<li>任意重定向</li>
+<li>SQL 注入</li>
+<li>反序列化注入</li>
+<li>正则输入源串拒绝服务 <code>ReDoS</code><br>说明：Java 代码用正则来验证客户端的输入，有些正则写法验证普通用户输入没有问题，<br>但是如果攻击人员使用的是特殊构造的字符串来验证，有可能导致死循环的结果。</li>
 </ul>
+<p>5.【强制】禁止向 <code>HTML</code> 页面输出未经安全过滤或未正确转义的用户数据。</p>
+<p>6.【强制】表单、<code>AJAX</code> 提交必须执行 <code>CSRF</code> 安全过滤。<br>说明：<code>CSRF(Cross-site request forgery)</code>跨站请求伪造是一类常见编程漏洞。对于存在CSRF 漏洞的应用/网站，攻击者可以事先构造好 URL，只要受害者用户一访问，后台便在用户不知情情况下对数据库中用户参数进行相应修改。</p>
+<p>7.【强制】在使用平台资源，譬如短信、邮件、电话、下单、支付，必须实现正确的防重放限制，如数量限制、疲劳度控制、验证码校验，避免被滥刷、资损。<br>说明：如注册时发送验证码到手机，如果没有限制次数和频率，那么可以利用此功能骚扰到其它用户，并造成短信平台资源浪费。</p>
+<p>8.【推荐】发贴、评论、发送即时消息等用户生成内容的场景必须实现防刷、文本内容违禁词过滤等风控策略。</p>
 
                 </div>
             </div>
@@ -217,9 +205,6 @@
         <div class="column col-3 hide-lg docs-toc-section">
             <div class="container px-0">
                 <div id="post-toc">
-                    
-                        <p class="h4 text-bold">目录</p>
-                        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#目录"><span class="post-toc-text">目录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前端"><span class="post-toc-text">前端</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#后端"><span class="post-toc-text">后端</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Git"><span class="post-toc-text">Git</span></a></li></ol></li></ol>
                     
                 </div>
             </div>
